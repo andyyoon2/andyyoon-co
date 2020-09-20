@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Sinkin Sans';
+  src: url('/fonts/sinkin-sans/SinkinSans-400Regular.otf') format('otf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Sinkin Sans';
+  src: url('/fonts/sinkin-sans/SinkinSans-400Italic.otf') format('otf');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Sinkin Sans';
+  src: url('/fonts/sinkin-sans/SinkinSans-700Bold.otf') format('otf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Sinkin Sans';
+  src: url('/fonts/sinkin-sans/SinkinSans-300Light.otf') format('otf');
+  font-weight: 300;
+}
+
+body {
+  font-family: 'Sinkin Sans', 'Helvetica', 'Arial', sans-serif;
+}
