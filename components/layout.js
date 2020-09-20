@@ -5,39 +5,40 @@ import { pagePadding, transitionDurationEasing } from '../styles';
 
 const fontSize = '28px';
 const iconSize = '26px';
-const StyledHeader = styled.header`
-  font-family: 'Questrial', 'Helvetica', 'Arial', sans-serif;
-  padding-top: ${pagePadding};
-  padding-left: ${pagePadding};
-  a {
-    color: ${({theme}) => theme.primary};
-    font-size: ${fontSize};
-    text-decoration: none;
-    transition: all ${transitionDurationEasing};
-    span {
-      display: inline-block;
-      font-size: ${iconSize};
-      // transition: transform ${transitionDurationEasing};
-    }
-    &:hover {
-      color: ${({theme}) => theme.secondary};
-      // span {
-      //   transform: rotate(-90deg) translateY(-8px);
-      // }
+const StyledLayout = styled.div`
+  padding: ${props => props.padding ? pagePadding : '0'};
+  header.layout-header {
+    font-family: 'Questrial', 'Helvetica', 'Arial', sans-serif;
+    a {
+      color: ${({theme}) => theme.primary};
+      font-size: ${fontSize};
+      text-decoration: none;
+      transition: all ${transitionDurationEasing};
+      span {
+        display: inline-block;
+        font-size: ${iconSize};
+        // transition: transform ${transitionDurationEasing};
+      }
+      &:hover {
+        color: ${({theme}) => theme.secondary};
+        // span {
+        //   transform: rotate(-90deg) translateY(-8px);
+        // }
+      }
     }
   }
 `;
 
-const Layout = ({ children }) => (
-  <>
+const Layout = ({ children, padding = true }) => (
+  <StyledLayout padding={padding}>
     <Head>
       {/* TODO: add meta tags */}
     </Head>
-    <StyledHeader>
+    <header className="layout-header">
       <Link href="/"><a><span>▲</span>Y</a></Link>
-    </StyledHeader>
+    </header>
     {children}
-  </>
+  </StyledLayout>
 );
 
 export default Layout;
