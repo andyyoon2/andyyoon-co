@@ -20,6 +20,10 @@
   font-weight: 300;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: 'Sinkin Sans', 'Helvetica', 'Arial', sans-serif;
 }
