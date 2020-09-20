@@ -39,6 +39,7 @@ const Contact = () => (
         <a key={link.label} href={link.href} title={link.label}>{link.icon ? link.icon : link.label}</a>
       ))}
     </div>
+    <small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> and <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
   </StyledContact>
 );
 
