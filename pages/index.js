@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import Contact from '../components/contact';
+import { transitionDurationEasing } from '../styles';
 
 const shapeSpacing = '1.5rem';
 const shapeSize = '50px';
@@ -56,7 +57,7 @@ const Main = styled.main`
       margin-bottom: 1em;
       text-decoration-color: ${({theme}) => theme.primary};
       text-decoration-thickness: 4px;
-      transition: all 0.2s ease-in-out;
+      transition: all ${transitionDurationEasing};
       :hover {
         text-decoration-color: ${({theme}) => theme.secondary};
       }

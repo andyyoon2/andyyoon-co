@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Email, GitHub, Instagram, LinkedIn } from '../icons';
+import { transitionDurationEasing } from '../styles';
 
 const links = [
   {
@@ -28,6 +29,10 @@ const StyledContact = styled.section`
   svg {
     height: 3rem;
     width: 3rem;
+    transition: all ${transitionDurationEasing};
+    &:hover {
+      fill: ${({theme}) => theme.primary};
+    }
   }
 `;
 
