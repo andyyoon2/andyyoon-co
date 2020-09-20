@@ -20,7 +20,7 @@ const Main = styled.main`
     position: relative;
     text-align: center;
     h1, h2, h3 {
-      // font-weight: 300;
+      font-weight: 400;
     }
     &.top {
       padding: ${shapeSpacing} 0;
