@@ -1,15 +1,14 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { transitionDurationEasing } from '../styles';
+import { pagePadding, transitionDurationEasing } from '../styles';
 
-const padding = '2rem';
 const fontSize = '28px';
 const iconSize = '26px';
 const StyledHeader = styled.header`
   font-family: 'Questrial', 'Helvetica', 'Arial', sans-serif;
-  padding-top: ${padding};
-  padding-left: ${padding};
+  padding-top: ${pagePadding};
+  padding-left: ${pagePadding};
   a {
     color: ${({theme}) => theme.primary};
     font-size: ${fontSize};
