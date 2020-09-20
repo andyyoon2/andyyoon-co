@@ -13,9 +13,9 @@ const Layout = ({ children }) => (
     <Head>
       {/* TODO: add meta tags */}
     </Head>
-    <StyledHeader>
+    {/* <StyledHeader>
       <Link href="/"><a>▲Y</a></Link>
-    </StyledHeader>
+    </StyledHeader> */}
     {children}
   </>
 );

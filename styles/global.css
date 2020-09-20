@@ -19,7 +19,3 @@
   src: url('/fonts/sinkin-sans/SinkinSans-300Light.otf') format('otf');
   font-weight: 300;
 }
-
-body {
-  font-family: 'Sinkin Sans', 'Helvetica', 'Arial', sans-serif;
-}
