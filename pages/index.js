@@ -1,18 +1,29 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import styled from 'styled-components';
 import { Contact, Heading, Layout, YoonLink } from '../components';
-import { transitionDurationEasing } from '../styles';
+import { breakpoints } from '../styles';
 
 const shapeSpacing = '1.5rem';
 const shapeSize = '50px';
 
 const Main = styled.main`
+  min-height: 100vh;
+  max-width: 1200px;
+  margin-left: auto;
+  position: relative;
   img {
     width: 100%;
     position: sticky;
     top: 0;
     z-index: -1;
+    @media (min-width: ${breakpoints.tablet}) {
+      position: absolute;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 13%;
+    }
   }
   .content {
     background-color: #fff;
@@ -31,6 +42,10 @@ const Main = styled.main`
         margin-bottom: 0;
       }
     }
+
+    @media (min-width: ${breakpoints.tablet}) {
+      width: 50%;
+    }
   }
   .content-shape {
     position: absolute;
@@ -45,6 +60,9 @@ const Main = styled.main`
       border-right: 100vw solid transparent;
       top: 0;
       transform: translateY(-100%);
+    }
+    @media (min-width: ${breakpoints.tablet}) {
+      display: none;
     }
   }
   .site-map {

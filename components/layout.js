@@ -33,9 +33,9 @@ const Layout = ({ children, padding = true }) => (
     <Head>
       {/* TODO: add meta tags */}
     </Head>
-    <header className="layout-header">
+    {/* <header className="layout-header">
       <Link href="/"><a><span>▲</span>Y</a></Link>
-    </header>
+    </header> */}
     {children}
   </StyledLayout>
 );
