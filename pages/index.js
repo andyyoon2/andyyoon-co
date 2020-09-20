@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
-import Layout from '../components/layout';
-import Contact from '../components/contact';
+import { Contact, Heading, Layout } from '../components';
 import { transitionDurationEasing } from '../styles';
 
 const shapeSpacing = '1.5rem';
@@ -66,7 +65,7 @@ const Main = styled.main`
 `;
 
 const Home = () => (
-  <Layout>
+  <Layout padding={false}>
     <Head>
       <title>Andy Yoon</title>
       <link rel="icon" href="/favicon.ico" />
@@ -74,9 +73,9 @@ const Home = () => (
 
     <Main>
       <div className="content top">
-        <h1>Andy Yoon</h1>
-        <h2>Web Developer, Musician</h2>
-        <h3>Senior Frontend Engineer at EnterpriseAlumni</h3>
+        <Heading tag="h1">Andy Yoon</Heading>
+        {/* <h2>Web Developer, Musician</h2>
+        <h3>Senior Frontend Engineer at EnterpriseAlumni</h3> */}
         <div className="content-shape trailing"></div>
       </div>
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Heading from './heading';
 import { Email, GitHub, Instagram, LinkedIn } from '../icons';
 import { transitionDurationEasing } from '../styles';
 
@@ -38,7 +39,7 @@ const StyledContact = styled.section`
 
 const Contact = () => (
   <StyledContact>
-    <h2>Let's Connect</h2>
+    <Heading tag="h2">Let's Connect</Heading>
     <div>
       {links.map(link => (
         <a key={link.label} href={link.href} title={link.label}>{link.icon ? link.icon : link.label}</a>

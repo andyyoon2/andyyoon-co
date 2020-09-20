@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import Layout from '../../components/layout';
+import { Heading, Layout } from '../components';
 import { getAllPosts } from '../../lib';
 
 const Blog = ({ posts }) => (
   <Layout>
-    <h1>Blog</h1>
+    <Heading tag="h1">Blog</Heading>
     <ul>
       {posts.map(post => (
         <li key={post.slug}><Link href={`/blog/${post.slug}`}><a>{post.title}</a></Link></li>

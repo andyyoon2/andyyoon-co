@@ -1,8 +1,8 @@
-import Layout from '../components/layout';
+import { Heading, Layout } from '../components';
 
 const Resume = () => (
   <Layout>
-    <h1>Resume</h1>
+    <Heading tag="h1">Resume</Heading>
   </Layout>
 );
 
