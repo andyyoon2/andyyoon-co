@@ -10,6 +10,9 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
+    * {
+      box-sizing: border-box;
+    }
   }
   h1, h2, h3, h4, h5 {
     font-family: 'Questrial', 'Helvetica', 'Arial', sans-serif;
