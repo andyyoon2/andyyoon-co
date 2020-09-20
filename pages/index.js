@@ -18,6 +18,13 @@ const Main = styled.main`
     color: #000;
     position: relative;
     text-align: center;
+    h1, h2, h3 {
+      font-weight: 300;
+    }
+    &.top h3 {
+      margin-bottom: 0;
+      padding-bottom: 1.5rem;
+    }
   }
   .content-shape {
     position: absolute;
@@ -44,15 +51,15 @@ const Home = () => (
     </Head>
 
     <Main>
-      <div className="content">
+      <div className="content top">
         <h1>Andy Yoon</h1>
         <h2>Web Developer, Musician</h2>
         <h3>Senior Frontend Engineer at EnterpriseAlumni</h3>
         <div className="content-shape trailing"></div>
       </div>
-        
+
       <img src="/images/hero.jpg" alt="Andy Yoon" />
-      
+
       <div className="content">
         <div className="content-shape leading"></div>
         <Link href="resume"><a>Resume</a></Link>
