@@ -8,7 +8,6 @@ const iconSize = '26px';
 const StyledLayout = styled.div`
   padding: ${props => props.padding ? pagePadding : '0'};
   header.layout-header {
-    font-family: 'Questrial', 'Helvetica', 'Arial', sans-serif;
     a {
       color: ${({theme}) => theme.primary};
       font-size: ${fontSize};
