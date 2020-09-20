@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib';
 
 const Post = ({ post }) => (
-  <div>
+  <>
     <h1>{post.title}</h1>
     <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
     <Link href="/">Home</Link>
-  </div>
+  </>
 );
 
 // Code adapted from Next.js blog starter

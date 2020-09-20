@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { getAllPosts } from '../../lib';
 
 const Blog = ({ posts }) => (
-  <div>
+  <>
     <h1>Blog</h1>
     <ul>
       {posts.map(post => (
@@ -10,7 +10,7 @@ const Blog = ({ posts }) => (
       ))}
     </ul>
     <Link href="/">Home</Link>
-  </div>
+  </>
 );
 
 export async function getStaticProps() {
