@@ -1,10 +1,9 @@
-import Link from 'next/link';
+import Layout from '../components/layout';
 
 const Resume = () => (
-  <>
+  <Layout>
     <h1>Resume</h1>
-    <Link href="/">Home</Link>
-  </>
+  </Layout>
 );
 
 export default Resume;
