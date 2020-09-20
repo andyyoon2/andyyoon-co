@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
 import Layout from '../components/layout';
+import Contact from '../components/contact';
 
 const shapeSpacing = '1.5rem';
 const shapeSize = '50px';
@@ -88,13 +89,7 @@ const Home = () => (
           <div><Link href="blog"><a>Blog</a></Link></div>
         </div>
 
-        <h2>Contact n stuff</h2>
-        <div>
-          <a href="mailto:ayoon212@hey.com" target="_blank" rel="noopener noreferrer">ayoon212@hey.com</a>
-          <a href="https://github.com/ayoon212">GitHub</a>
-          <a href="https://linkedin.com/in/andrew-yoon-845112105/">LinkedIn</a>
-          <a href="https://instagram.com/andyyoonn">Instagram</a>
-        </div>
+        <Contact />
       </div>
     </Main>
   </Layout>
