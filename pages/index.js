@@ -87,6 +87,7 @@ const Home = () => (
           <div><Link href="resume"><a>Resume</a></Link></div>
           <div><Link href="portfolio"><a>Portfolio</a></Link></div>
           <div><Link href="blog"><a>Blog</a></Link></div>
+          <div><Link href="blog"><a>Dog</a></Link></div>
         </div>
 
         <Contact />
