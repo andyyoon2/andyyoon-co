@@ -13,14 +13,14 @@ const links = [
     icon: <GitHub />
   },
   {
-    href: 'https://linkedin.com/in/andrew-yoon-845112105/',
-    label: 'LinkedIn',
-    icon: <LinkedIn />
-  },
-  {
     href: 'https://instagram.com/andyyoonn',
     label: 'Instagram',
     icon: <Instagram />
+  },
+  {
+    href: 'https://linkedin.com/in/andrew-yoon-845112105/',
+    label: 'LinkedIn',
+    icon: <LinkedIn />
   },
 ];
 
@@ -39,7 +39,7 @@ const Contact = () => (
         <a key={link.label} href={link.href} title={link.label}>{link.icon ? link.icon : link.label}</a>
       ))}
     </div>
-    <small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> and <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
+    <small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
   </StyledContact>
 );
 
