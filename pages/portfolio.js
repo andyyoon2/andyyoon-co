@@ -1,8 +1,8 @@
-import Layout from '../components/layout';
+import { Heading, Layout } from '../components';
 
 const Portfolio = () => (
   <Layout>
-    <h1>Portfolio</h1>
+    <Heading tag="h1">Portfolio</Heading>
   </Layout>
 );
 

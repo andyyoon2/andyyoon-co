@@ -1,5 +1,7 @@
 import styled from 'styled-components';
+import Heading from './heading';
 import { Email, GitHub, Instagram, LinkedIn } from '../icons';
+import { transitionDurationEasing } from '../styles';
 
 const links = [
   {
@@ -28,12 +30,16 @@ const StyledContact = styled.section`
   svg {
     height: 3rem;
     width: 3rem;
+    transition: all ${transitionDurationEasing};
+    &:hover {
+      fill: ${({theme}) => theme.primary};
+    }
   }
 `;
 
 const Contact = () => (
   <StyledContact>
-    <h2>Let's Connect</h2>
+    <Heading tag="h2">Let's Connect</Heading>
     <div>
       {links.map(link => (
         <a key={link.label} href={link.href} title={link.label}>{link.icon ? link.icon : link.label}</a>

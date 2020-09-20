@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
-import Layout from '../components/layout';
-import Contact from '../components/contact';
+import { Contact, Heading, Layout, YoonLink } from '../components';
+import { transitionDurationEasing } from '../styles';
 
 const shapeSpacing = '1.5rem';
 const shapeSize = '50px';
@@ -54,18 +54,12 @@ const Main = styled.main`
       color: #000;
       font-size: 2.75rem;
       margin-bottom: 1em;
-      text-decoration-color: ${({theme}) => theme.primary};
-      text-decoration-thickness: 4px;
-      transition: all 0.2s ease-in-out;
-      :hover {
-        text-decoration-color: ${({theme}) => theme.secondary};
-      }
     }
   }
 `;
 
 const Home = () => (
-  <Layout>
+  <Layout padding={false}>
     <Head>
       <title>Andy Yoon</title>
       <link rel="icon" href="/favicon.ico" />
@@ -73,9 +67,9 @@ const Home = () => (
 
     <Main>
       <div className="content top">
-        <h1>Andy Yoon</h1>
-        <h2>Web Developer, Musician</h2>
-        <h3>Senior Frontend Engineer at EnterpriseAlumni</h3>
+        <Heading tag="h1">Andy Yoon</Heading>
+        {/* <h2>Web Developer, Musician</h2>
+        <h3>Senior Frontend Engineer at EnterpriseAlumni</h3> */}
         <div className="content-shape trailing"></div>
       </div>
 
@@ -84,10 +78,10 @@ const Home = () => (
       <div className="content">
         <div className="content-shape leading"></div>
         <div className="site-map">
-          <div><Link href="resume"><a>Resume</a></Link></div>
-          <div><Link href="portfolio"><a>Portfolio</a></Link></div>
-          <div><Link href="blog"><a>Blog</a></Link></div>
-          <div><Link href="blog"><a>Dog</a></Link></div>
+          <div><YoonLink href="resume">Resume</YoonLink></div>
+          <div><YoonLink href="portfolio">Portfolio</YoonLink></div>
+          <div><YoonLink href="blog">Blog</YoonLink></div>
+          <div><YoonLink href="blog">Dog</YoonLink></div>
         </div>
 
         <Contact />

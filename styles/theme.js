@@ -4,8 +4,8 @@ const moderateYellow = '#b7b957';
 
 const theme = {
   primary: moderateBlue,
-  secondary: moderateYellow,
-  tertiary: moderateRed
+  secondary: moderateRed,
+  tertiary: moderateYellow
 };
 
 export default theme;
