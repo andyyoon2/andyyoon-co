@@ -1,12 +1,13 @@
 import Link from 'next/link';
+import Layout from '../../components/layout';
 import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib';
 
 const Post = ({ post }) => (
-  <>
+  <Layout>
     <h1>{post.title}</h1>
     <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
     <Link href="/">Home</Link>
-  </>
+  </Layout>
 );
 
 // Code adapted from Next.js blog starter

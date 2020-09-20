@@ -1,16 +1,16 @@
 import Link from 'next/link';
+import Layout from '../../components/layout';
 import { getAllPosts } from '../../lib';
 
 const Blog = ({ posts }) => (
-  <>
+  <Layout>
     <h1>Blog</h1>
     <ul>
       {posts.map(post => (
         <li key={post.slug}>{post.title}</li>
       ))}
     </ul>
-    <Link href="/">Home</Link>
-  </>
+  </Layout>
 );
 
 export async function getStaticProps() {

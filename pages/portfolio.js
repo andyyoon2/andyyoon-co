@@ -1,10 +1,9 @@
-import Link from 'next/link';
+import Layout from '../components/layout';
 
 const Portfolio = () => (
-  <>
+  <Layout>
     <h1>Portfolio</h1>
-    <Link href="/">Home</Link>
-  </>
+  </Layout>
 );
 
 export default Portfolio;
