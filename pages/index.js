@@ -27,7 +27,6 @@ const Main = styled.main`
   }
   .content {
     background-color: #fff;
-    color: #000;
     position: relative;
     text-align: center;
     // h1, h2, h3 {
@@ -63,13 +62,15 @@ const Main = styled.main`
     padding-top: ${shapeSpacing};
     a {
       display: inline-block;
-      color: #000;
+      color: inherit;
       font-size: 2.75rem;
       margin-bottom: 1em;
     }
   }
   .hero-text {
     .name {
+      font-size: 3rem;
+      font-variation-settings: 'wght' 750;
       margin-top: 0;
     }
     .greeting {
