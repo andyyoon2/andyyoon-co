@@ -12,52 +12,16 @@ const Main = styled.main`
   max-width: 1200px;
   margin-left: auto;
   position: relative;
-  img.bg-image {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: -1;
-    @media (min-width: ${breakpoints.tablet}) {
-      position: absolute;
-      left: 50%;
-      width: 50%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 13%;
-    }
-  }
   .content {
     background-color: #fff;
     position: relative;
     text-align: center;
-    // h1, h2, h3 {
-    //   font-weight: 400;
-    // }
     &.top {
       padding: ${shapeSpacing};
     }
 
     @media (min-width: ${breakpoints.tablet}) {
       width: 50%;
-    }
-  }
-  .content-shape {
-    position: absolute;
-    left: 0;
-    &.trailing {
-      border-top: ${shapeSize} solid #fff;
-      border-left: 100vw solid transparent;
-      bottom: 0;
-      transform: translateY(100%);
-    }
-    &.leading {
-      border-bottom: ${shapeSize} solid #fff;
-      border-right: 100vw solid transparent;
-      top: 0;
-      transform: translateY(-100%);
-    }
-    @media (min-width: ${breakpoints.tablet}) {
-      display: none;
     }
   }
   .site-map {
