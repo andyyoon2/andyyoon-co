@@ -12,16 +12,33 @@ const Main = styled.main`
   max-width: 1200px;
   margin-left: auto;
   position: relative;
+  
+  .top-content {
+    padding: 8rem 3rem;
+    text-align: left;
+    .name {
+      font-size: 3rem;
+      font-variation-settings: 'wght' 600;
+      margin: 0;
+    }
+    .greeting {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    img.headshot {
+      width: 180px;
+      margin: 0 auto;
+      // slight correction for background lines in the image
+      transform: rotate(-2deg);
+    }
+  }
+  
   .content {
-    background-color: #fff;
+    // background-color: #fff;
     position: relative;
     text-align: center;
     &.top {
       padding: ${shapeSpacing};
-    }
-
-    @media (min-width: ${breakpoints.tablet}) {
-      width: 50%;
     }
   }
   .site-map {
@@ -34,24 +51,10 @@ const Main = styled.main`
     }
   }
   .hero-text {
-    .name {
-      font-size: 3rem;
-      font-variation-settings: 'wght' 600;
-      margin-top: 0;
-    }
-    .greeting {
-      margin-bottom: 0;
-      margin-left: 0.375rem;
-    }
     p {
       line-height: 1.5;
       padding: 0 2.125rem;
       text-align: left;
-    }
-    img.headshot {
-      width: 240px;
-      margin: 0 auto;
-      margin-bottom: 1rem;
     }
     a {
       color: inherit;
@@ -69,19 +72,19 @@ const Home = () => (
     </Head>
 
     <Main>
-      <div className="content top hero-text">
+      <div className="top-content">
+        <img className="headshot" src="/images/andy-cropped.jpg" alt="Andy Yoon" />
         <p className="greeting">Welcome! My name is</p>
         <Heading tag="h1" className="name">Andy Yoon</Heading>
-        <img className="headshot" src="/images/andy-cropped.png" alt="Andy Yoon" />
+      </div>
+      <div>
         <p>I'm a <Link href="resume">web developer</Link> and <Link href="portfolio">musician</Link> who lives to bring joy to others' lives and to influence people to be their best.</p>
         <p>My mission is to work together with passionate people to make a tangible, positive contribution to the world.</p>
         <p>Check out my work here</p>
         <p>[contact section] I'm always open to discuss collabs on new projects!</p>
-        {/*<div className="content-shape trailing"></div>*/}
       </div>
 
       <div className="content">
-        {/*<div className="content-shape leading"></div>*/}
         <div className="site-map">
           <div><YoonLink href="resume">Resume</YoonLink></div>
           <div><YoonLink href="portfolio">Portfolio</YoonLink></div>
