@@ -11,7 +11,7 @@ const Main = styled.main`
   max-width: 1200px;
   margin-left: auto;
   position: relative;
-  img {
+  img.bg-image {
     width: 100%;
     position: sticky;
     top: 0;
@@ -71,16 +71,22 @@ const Main = styled.main`
   .hero-text {
     .name {
       font-size: 3rem;
-      font-variation-settings: 'wght' 750;
+      font-variation-settings: 'wght' 600;
       margin-top: 0;
     }
     .greeting {
       margin-bottom: 0;
+      margin-left: 0.375rem;
     }
     p {
       line-height: 1.5;
       padding: 0 2.125rem;
       text-align: left;
+    }
+    img.headshot {
+      width: 240px;
+      margin: 0 auto;
+      margin-bottom: 1rem;
     }
   }
 `;
@@ -96,17 +102,16 @@ const Home = () => (
       <div className="content top hero-text">
         <p className="greeting">Welcome! My name is</p>
         <Heading tag="h1" className="name">Andy Yoon</Heading>
+        <img className="headshot" src="/images/andy-cropped.png" alt="Andy Yoon" />
         <p>I'm a web developer and musician who lives to bring joy to others' lives and to influence people to be their best.</p>
         <p>My mission is to work together with passionate people to make a tangible, positive contribution to the world.</p>
         <p>Check out my work here</p>
         <p>[contact section] I'm always open to discuss collabs on new projects!</p>
-        <div className="content-shape trailing"></div>
+        {/*<div className="content-shape trailing"></div>*/}
       </div>
 
-      <img src="/images/hero.jpg" alt="Andy Yoon" />
-
       <div className="content">
-        <div className="content-shape leading"></div>
+        {/*<div className="content-shape leading"></div>*/}
         <div className="site-map">
           <div><YoonLink href="resume">Resume</YoonLink></div>
           <div><YoonLink href="portfolio">Portfolio</YoonLink></div>
