@@ -84,11 +84,11 @@ const Home = () => (
     </Head>
 
     <Main>
-      <div className="content top">
-        <Heading tag="h4">Hi, I'm</Heading>
-        <Heading tag="h1">Andy Yoon</Heading>
+      <div className="content top hero-text">
+        <Heading tag="h4" className="greeting">Hi, I'm</Heading>
+        <Heading tag="h1" className="name">Andy Yoon</Heading>
         <p>I'm a web developer and musician who lives to bring joy to others' lives and to influence people to be their best.</p>
-        <p>I am on a mission to make a tangible, positive contribution to the world.</p>
+        <p>My mission is to work together with passionate people to make a tangible, positive contribution to the world.</p>
         <p>Check out my work here</p>
         <p>[contact section] I'm always open to discuss collabs on new projects!</p>
         <div className="content-shape trailing"></div>
