@@ -33,7 +33,7 @@ const Main = styled.main`
     //   font-weight: 400;
     // }
     &.top {
-      padding: ${shapeSpacing} 0;
+      padding: ${shapeSpacing};
     }
 
     @media (min-width: ${breakpoints.tablet}) {
@@ -42,6 +42,7 @@ const Main = styled.main`
   }
   .content-shape {
     position: absolute;
+    left: 0;
     &.trailing {
       border-top: ${shapeSize} solid #fff;
       border-left: 100vw solid transparent;
@@ -76,6 +77,11 @@ const Main = styled.main`
     .greeting {
       margin-bottom: 0;
     }
+    p {
+      line-height: 1.5;
+      padding: 0 2.125rem;
+      text-align: left;
+    }
   }
 `;
 
@@ -88,7 +94,7 @@ const Home = () => (
 
     <Main>
       <div className="content top hero-text">
-        <Heading tag="h4" className="greeting">Hi, I'm</Heading>
+        <p className="greeting">Welcome! My name is</p>
         <Heading tag="h1" className="name">Andy Yoon</Heading>
         <p>I'm a web developer and musician who lives to bring joy to others' lives and to influence people to be their best.</p>
         <p>My mission is to work together with passionate people to make a tangible, positive contribution to the world.</p>
