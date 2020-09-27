@@ -30,17 +30,11 @@ const Main = styled.main`
     color: #000;
     position: relative;
     text-align: center;
-    h1, h2, h3 {
-      font-weight: 400;
-    }
+    // h1, h2, h3 {
+    //   font-weight: 400;
+    // }
     &.top {
       padding: ${shapeSpacing} 0;
-      h1 {
-        margin-top: 0;
-      }
-      h3 {
-        margin-bottom: 0;
-      }
     }
 
     @media (min-width: ${breakpoints.tablet}) {
@@ -72,6 +66,14 @@ const Main = styled.main`
       color: #000;
       font-size: 2.75rem;
       margin-bottom: 1em;
+    }
+  }
+  .hero-text {
+    .name {
+      margin-top: 0;
+    }
+    .greeting {
+      margin-bottom: 0;
     }
   }
 `;
