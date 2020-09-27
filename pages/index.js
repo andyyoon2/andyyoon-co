@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { Contact, Heading, Layout, YoonLink } from '../components';
 import { breakpoints } from '../styles';
@@ -88,6 +89,11 @@ const Main = styled.main`
       margin: 0 auto;
       margin-bottom: 1rem;
     }
+    a {
+      color: inherit;
+      font-variation-settings: 'wght' 525;
+      background-color: #42c9ff;
+    }
   }
 `;
 
@@ -103,7 +109,7 @@ const Home = () => (
         <p className="greeting">Welcome! My name is</p>
         <Heading tag="h1" className="name">Andy Yoon</Heading>
         <img className="headshot" src="/images/andy-cropped.png" alt="Andy Yoon" />
-        <p>I'm a web developer and musician who lives to bring joy to others' lives and to influence people to be their best.</p>
+        <p>I'm a <Link href="resume">web developer</Link> and <Link href="portfolio">musician</Link> who lives to bring joy to others' lives and to influence people to be their best.</p>
         <p>My mission is to work together with passionate people to make a tangible, positive contribution to the world.</p>
         <p>Check out my work here</p>
         <p>[contact section] I'm always open to discuss collabs on new projects!</p>
