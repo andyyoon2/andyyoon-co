@@ -14,7 +14,7 @@ const StyledResume = styled.main`
 `;
 
 const Resume = () => (
-  <Layout>
+  <Layout currentPage="resume">
     <StyledResume>
       <Heading tag="h1">Resume</Heading>
       <Heading tag="h2">Senior Front End Engineer at EnterpriseAlumni</Heading>
