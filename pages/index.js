@@ -65,7 +65,7 @@ const oldStyles = `
 `;
 
 const Home = () => (
-  <Layout padding={false}>
+  <Layout currentPage="home">
     <Head>
       <title>Andy Yoon</title>
       <link rel="icon" href="/favicon.ico" />
@@ -80,8 +80,8 @@ const Home = () => (
         </h1>
       </Hero>
       <Blurb>
-        <p>I'm a <Link href="resume">web developer</Link> and <Link href="portfolio">musician</Link> who lives to bring joy to others' lives and to influence people to be their best.</p>
-        <p>My mission is to work together with passionate people to make a tangible, positive contribution to the world.</p>
+        <p>I live to bring joy to others' lives and to influence people to be their best.</p>
+        <p>My mission is to work together with passionate people to make a positive contribution to the world.</p>
         <p>Check out my work here</p>
         <p>[contact section] I'm always open to discuss collabs on new projects!</p>
       </Blurb>
