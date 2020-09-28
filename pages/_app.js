@@ -30,6 +30,9 @@ const GlobalStyle = createGlobalStyle`
     &:hover {
       text-decoration-color: ${({theme}) => theme.primaryDark};
     }
+    &.no-decoration {
+      text-decoration: none;
+    }
   }
 `;
 

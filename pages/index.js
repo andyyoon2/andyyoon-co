@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { Contact, Heading, Layout, YoonLink } from '../components';
+import { Button, Contact, Heading, Layout, YoonLink } from '../components';
 import { breakpoints } from '../styles';
 
 const largeBoldWeight = '600';
@@ -18,6 +18,7 @@ const Main = styled.main`
     line-height: 1.5;
     h2 {
       font-variation-settings: 'wght' ${largeBoldWeight};
+      text-align: center;
     }
   }
 `;
@@ -44,7 +45,15 @@ const Hero = styled.section`
   }
 `;
 
-const Blurb = styled.section`
+const Work = styled.section`
+  text-align: center;
+  ul {
+    text-align: left;
+  }
+  button {
+    font-size: 1.125rem;
+    margin-top: 3rem;
+  }
 `;
 
 const Connect = styled.section`
@@ -85,19 +94,18 @@ const Home = () => (
           <span className="line">a <span className="highlight">web developer</span> and <span className="highlight">musician</span> based in <span className="keep-together">Los Angeles</span>.</span>
         </h1>
       </Hero>
-      <Blurb>
+      <section>
         <p>I live to bring joy to others' lives and to influence people to be their best.</p>
         <p>My mission is to work together with like-minded people to make a positive contribution to the world.</p>
-      </Blurb>
-      <section>
+      </section>
+      <Work>
         <h2>Work</h2>
         <List>
           <li><ListArrow /> Senior Frontend Engineer at <a href="https://enterprisealumni.com/">EnterpriseAlumni</a></li>
-          <li><Link href="/resume">See Resume</Link> ⟶</li>
         </List>
-      </section>
+        <Button><Link href="/resume"><a className="no-decoration">View Resume</a></Link></Button>
+      </Work>
       <section>
-        <h2>Passion Projects</h2>
         <List>
           <li><ListArrow /> iOS Developer at <a href="https://tapfive.io/">TapFive</a></li>
           <li><ListArrow /> Guitarist and Bandleader at <a href="https://www.instagram.com/nobathroombreaks/">No Bathroom Breaks</a></li>
