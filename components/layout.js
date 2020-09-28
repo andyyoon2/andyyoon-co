@@ -44,7 +44,27 @@ const Header = styled.header`
   }
 `;
 
-const Layout = ({ children, padding = true }) => (
+const Footer = styled.footer`
+  text-align: center;
+  padding: 1.25rem;
+`;
+
+const links = [
+  {
+    href: '/',
+    label: 'home'
+  },
+  {
+    href: '/blog',
+    label: 'blog'
+  },
+  {
+    href: '/resume',
+    label: 'resume'
+  },
+];
+
+const Layout = ({ children, currentPage }) => (
   <div>
     <Head>
       {/* TODO: add meta tags */}
@@ -52,12 +72,13 @@ const Layout = ({ children, padding = true }) => (
     <Header className="layout-header">
       {/*<Link href="/"><a><span>▲</span>Y</a></Link>*/}
       <div className="links">
-        <Link href="/">about</Link>
-        <Link href="/resume">resume</Link>
-        <Link href="/blog">blog</Link>
+        {links.map(link => (
+          currentPage != link.label && <Link key={link.label} href={link.href}>{link.label}</Link>
+        ))}
       </div>
     </Header>
     {children}
+    <Footer>© Andy Yoon 2020</Footer>
   </div>
 );
 
