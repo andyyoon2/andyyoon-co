@@ -15,24 +15,25 @@ const Main = styled.main`
   section {
     margin: 10rem 3rem;
   }
+  a {
+    color: inherit;
+    font-variation-settings: 'wght' 525;
+    background-color: #42c9ff;
+  }
 `;
 
 const Hero = styled.section`
   text-align: left;
-  .name {
-    font-size: 3rem;
-    font-variation-settings: 'wght' 600;
-    margin: 0;
-  }
-  .greeting {
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  img.headshot {
-    width: 180px;
-    margin: 0 auto;
-    // slight correction for background lines in the image
-    transform: rotate(-2deg);
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    span.line {
+      display: block;
+    }
+    .bold {
+      font-size: 1.5em;
+      font-variation-settings: 'wght' 600;
+    }
   }
 `;
 
@@ -89,9 +90,11 @@ const Home = () => (
 
     <Main>
       <Hero>
-        <img className="headshot" src="/images/andy-cropped.jpg" alt="Andy Yoon" />
-        <p className="greeting">Welcome! My name is</p>
-        <Heading tag="h1" className="name">Andy Yoon</Heading>
+        <h1>
+          <span className="line">Welcome!</span>
+          <span className="line">I'm <span className="bold">Andy Yoon</span>,</span>
+          <span className="line">a <Link href="resume">web developer</Link> and <Link href="portfolio">musician</Link> based in Los Angeles.</span>
+        </h1>
       </Hero>
       <Blurb>
         <p>I'm a <Link href="resume">web developer</Link> and <Link href="portfolio">musician</Link> who lives to bring joy to others' lives and to influence people to be their best.</p>
