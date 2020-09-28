@@ -4,19 +4,31 @@ import styled from 'styled-components';
 import { Contact, Heading, Layout, YoonLink } from '../components';
 import { breakpoints } from '../styles';
 
-const shapeSpacing = '1.5rem';
-const shapeSize = '50px';
+const largeBoldWeight = '600';
+const mediumBoldWeight = '525';
 
 const Main = styled.main`
   min-height: 100vh;
   max-width: 1200px;
   margin-left: auto;
   position: relative;
+
   section {
     margin: 12rem 3rem;
     line-height: 1.5;
     h2 {
-      font-variation-settings: 'wght' 600;
+      font-variation-settings: 'wght' ${largeBoldWeight};
+    }
+  }
+  a {
+    color: inherit;
+    display: inline-block;
+    font-variation-settings: 'wght' ${mediumBoldWeight};
+    text-decoration-color: ${({theme}) => theme.primaryDark};
+    transition: all ease-out 0.3s;
+    &:hover {
+      text-decoration-color: #000;
+      transform: translateY(-1px);
     }
   }
 `;
@@ -30,11 +42,11 @@ const Hero = styled.section`
     }
     .bold {
       font-size: 1.5em;
-      font-variation-settings: 'wght' 600;
+      font-variation-settings: 'wght' ${largeBoldWeight};
     }
     .highlight {
       background-color: ${({theme}) => theme.primary};
-      font-variation-settings: 'wght' 525;
+      font-variation-settings: 'wght' ${mediumBoldWeight};
       padding: 2px;
     }
   }
@@ -82,16 +94,16 @@ const Home = () => (
       <section>
         <h2>Work</h2>
         <List>
-          <li><ListArrow /> Senior Frontend Engineer at EnterpriseAlumni</li>
+          <li><ListArrow /> Senior Frontend Engineer at <a href="https://enterprisealumni.com/">EnterpriseAlumni</a></li>
           <li><ListArrow /> Resume ⟶</li>
         </List>
       </section>
       <section>
         <h2>Passion Projects</h2>
         <List>
-          <li><ListArrow /> Guitarist and Bandleader at No Bathroom Breaks ⟶</li>
-          <li><ListArrow /> Guitarist at Rory Seldon with InnerSession</li>
-          <li><ListArrow /> iOS Developer at TapFive</li>
+          <li><ListArrow /> Guitarist and Bandleader at <a href="https://www.instagram.com/nobathroombreaks/">No Bathroom Breaks</a></li>
+          <li><ListArrow /> Guitarist at <a href="http://roryseldon.com/index.html">Rory Seldon with InnerSession</a></li>
+          <li><ListArrow /> iOS Developer at <a href="https://tapfive.io/">TapFive</a></li>
         </List>
       </section>
       <section>
