@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Heading, Layout } from '../components';
+import { Heading, Layout } from '../../components';
 import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib';
 
 const Post = ({ post }) => (
