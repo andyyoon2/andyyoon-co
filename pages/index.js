@@ -34,6 +34,11 @@ const Hero = styled.section`
       font-size: 1.5em;
       font-variation-settings: 'wght' 600;
     }
+    .highlight {
+      background-color: ${({theme}) => theme.primary};
+      font-variation-settings: 'wght' 525;
+      padding: 2px;
+    }
   }
 `;
 
@@ -76,7 +81,7 @@ const Home = () => (
         <h1>
           <span className="line">Welcome!</span>
           <span className="line">I'm <span className="bold">Andy Yoon</span>,</span>
-          <span className="line">a <Link href="resume">web developer</Link> and <Link href="portfolio">musician</Link> based in Los Angeles.</span>
+          <span className="line">a <span className="highlight">web developer</span> and <span className="highlight">musician</span> based in<br/>Los Angeles.</span>
         </h1>
       </Hero>
       <Blurb>
