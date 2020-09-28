@@ -27,6 +27,8 @@ const links = [
 ];
 
 const StyledContact = styled.div`
+  text-align: center;
+
   .links {
     display: flex;
     justify-content: space-between;
@@ -50,7 +52,6 @@ const Contact = () => (
         <a key={link.label} href={link.href} title={link.label}>{link.icon ? link.icon : link.label}</a>
       ))}
     </div>
-    <small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
   </StyledContact>
 );
 

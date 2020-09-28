@@ -42,9 +42,8 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   a {
-    color: inherit;
     margin-left: 1em;
-    text-decoration-color: ${({theme}) => theme.primaryDark};
+    font-variation-settings: 'wght' 600;
     &.home {
       margin: 0;
     }
@@ -54,6 +53,12 @@ const Header = styled.header`
 const Footer = styled.footer`
   text-align: center;
   padding: 1.25rem;
+  div {
+    margin-bottom: 0.5em;
+  }
+  small {
+    color: #6a6a6a;
+  }
 `;
 
 const links = [
@@ -73,7 +78,6 @@ const Layout = ({ children, currentPage }) => (
       {/* TODO: add meta tags */}
     </Head>
     <Header className="layout-header">
-      {/*<Link href="/"><a><span>▲</span>Y</a></Link>*/}
       {currentPage != "home"
         ? <Link href="/"><a className="home">⟵ home</a></Link>
         : <div></div>
@@ -85,7 +89,10 @@ const Layout = ({ children, currentPage }) => (
       </div>
     </Header>
     {children}
-    <Footer>© Andy Yoon 2020</Footer>
+    <Footer>
+      <div>© Andy Yoon 2020</div>
+      <small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
+    </Footer>
   </div>
 );
 
