@@ -28,16 +28,37 @@ const StyledLayout = styled.div`
   }
 `;
 
+const Header = styled.header`
+  background: linear-gradient(rgba(255, 255, 255, 0.85) 60%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 0.1));
+  padding: 1.25rem;
+  padding-bottom: 2.5rem;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  a {
+    color: inherit;
+    margin-left: 1em;
+    text-decoration-color: ${({theme}) => theme.primaryDark};
+  }
+`;
+
 const Layout = ({ children, padding = true }) => (
-  <StyledLayout padding={padding}>
+  <div>
     <Head>
       {/* TODO: add meta tags */}
     </Head>
-    {/* <header className="layout-header">
-      <Link href="/"><a><span>▲</span>Y</a></Link>
-    </header> */}
+    <Header className="layout-header">
+      {/*<Link href="/"><a><span>▲</span>Y</a></Link>*/}
+      <div className="links">
+        <Link href="/">about</Link>
+        <Link href="/resume">resume</Link>
+        <Link href="/blog">blog</Link>
+      </div>
+    </Header>
     {children}
-  </StyledLayout>
+  </div>
 );
 
 export default Layout;
