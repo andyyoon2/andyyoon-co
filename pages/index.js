@@ -47,6 +47,12 @@ const Hero = styled.section`
 const Blurb = styled.section`
 `;
 
+const Connect = styled.section`
+  p {
+    margin-bottom: 3em;
+  }
+`;
+
 const List = styled.ul`
   padding-left: 1.25em;
   list-style: none;
@@ -98,11 +104,11 @@ const Home = () => (
           <li><ListArrow /> Guitarist at <a href="http://roryseldon.com/index.html">Rory Seldon with InnerSession</a></li>
         </List>
       </section>
-      <section>
-        <h2>Let's connect</h2>
-        <h3>How can we help each other achieve our goals?</h3>
+      <Connect>
+        <h2>Let's Connect</h2>
+        <p>How can we help each other achieve our goals?</p>
         <Contact />
-      </section>
+      </Connect>
     </Main>
   </Layout>
 );
