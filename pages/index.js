@@ -18,7 +18,7 @@ const Main = styled.main`
   a {
     color: inherit;
     font-variation-settings: 'wght' 525;
-    background-color: #42c9ff;
+    background-color: ${({theme}) => theme.primary};
   }
 `;
 
@@ -44,7 +44,7 @@ const Blurb = styled.section`
   a {
     color: inherit;
     font-variation-settings: 'wght' 525;
-    background-color: #42c9ff;
+    background-color: ${({theme}) => theme.primary};
   }
 `;
 
@@ -76,7 +76,7 @@ const oldStyles = `
     a {
       color: inherit;
       font-variation-settings: 'wght' 525;
-      background-color: #42c9ff;
+      background-color: ${({theme}) => theme.primary};
     }
   }
 `;
