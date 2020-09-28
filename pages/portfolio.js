@@ -1,7 +1,7 @@
 import { Heading, Layout } from '../components';
 
 const Portfolio = () => (
-  <Layout>
+  <Layout currentPage="portfolio">
     <Heading tag="h1">Portfolio</Heading>
   </Layout>
 );

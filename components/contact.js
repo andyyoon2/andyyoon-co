@@ -26,26 +26,32 @@ const links = [
   },
 ];
 
-const StyledContact = styled.section`
+const StyledContact = styled.div`
+  text-align: center;
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   svg {
     height: 3rem;
     width: 3rem;
     transition: all ${transitionDurationEasing};
     &:hover {
-      fill: ${({theme}) => theme.primary};
+      fill: ${({theme}) => theme.primaryDark};
     }
   }
 `;
 
 const Contact = () => (
   <StyledContact>
-    <Heading tag="h2">Let's Connect</Heading>
-    <div>
+    <div className="links">
       {links.map(link => (
         <a key={link.label} href={link.href} title={link.label}>{link.icon ? link.icon : link.label}</a>
       ))}
     </div>
-    <small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
   </StyledContact>
 );
 

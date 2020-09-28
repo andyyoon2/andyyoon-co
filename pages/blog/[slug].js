@@ -3,7 +3,7 @@ import { Heading, Layout } from '../components';
 import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib';
 
 const Post = ({ post }) => (
-  <Layout>
+  <Layout currentPage="blog">
     <Heading tag="h1">{post.title}</Heading>
     <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
     <Link href="/">Home</Link>
