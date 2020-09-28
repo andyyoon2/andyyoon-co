@@ -9,12 +9,12 @@ const mediumBoldWeight = '525';
 
 const Main = styled.main`
   min-height: 100vh;
-  max-width: 1200px;
-  margin-left: auto;
+  max-width: 500px;
+  margin: 0 auto;
   position: relative;
 
   section {
-    margin: 12rem 3rem;
+    margin: 14rem 3rem;
     line-height: 1.5;
     h2 {
       font-variation-settings: 'wght' ${largeBoldWeight};
@@ -24,11 +24,10 @@ const Main = styled.main`
     color: inherit;
     display: inline-block;
     font-variation-settings: 'wght' ${mediumBoldWeight};
-    text-decoration-color: ${({theme}) => theme.primaryDark};
+    text-decoration-color: #000;
     transition: all ease-out 0.3s;
     &:hover {
-      text-decoration-color: #000;
-      transform: translateY(-1px);
+      text-decoration-color: ${({theme}) => theme.primaryDark};
     }
   }
 `;
@@ -39,6 +38,9 @@ const Hero = styled.section`
     font-size: 1.5rem;
     span.line {
       display: block;
+    }
+    span.keep-together {
+      display: inline-block;
     }
     .bold {
       font-size: 1.5em;
@@ -84,26 +86,26 @@ const Home = () => (
         <h1>
           <span className="line">Welcome!</span>
           <span className="line">I'm <span className="bold">Andy Yoon</span>,</span>
-          <span className="line">a <span className="highlight">web developer</span> and <span className="highlight">musician</span> based in<br/>Los Angeles.</span>
+          <span className="line">a <span className="highlight">web developer</span> and <span className="highlight">musician</span> based in <span className="keep-together">Los Angeles</span>.</span>
         </h1>
       </Hero>
       <Blurb>
         <p>I live to bring joy to others' lives and to influence people to be their best.</p>
-        <p>My mission is to work together with passionate people to make a positive contribution to the world.</p>
+        <p>My mission is to work together with like-minded people to make a positive contribution to the world.</p>
       </Blurb>
       <section>
         <h2>Work</h2>
         <List>
           <li><ListArrow /> Senior Frontend Engineer at <a href="https://enterprisealumni.com/">EnterpriseAlumni</a></li>
-          <li><ListArrow /> Resume ⟶</li>
+          <li><Link href="/resume">See Resume</Link> ⟶</li>
         </List>
       </section>
       <section>
         <h2>Passion Projects</h2>
         <List>
+          <li><ListArrow /> iOS Developer at <a href="https://tapfive.io/">TapFive</a></li>
           <li><ListArrow /> Guitarist and Bandleader at <a href="https://www.instagram.com/nobathroombreaks/">No Bathroom Breaks</a></li>
           <li><ListArrow /> Guitarist at <a href="http://roryseldon.com/index.html">Rory Seldon with InnerSession</a></li>
-          <li><ListArrow /> iOS Developer at <a href="https://tapfive.io/">TapFive</a></li>
         </List>
       </section>
       <section>

@@ -27,19 +27,25 @@ const links = [
 ];
 
 const StyledContact = styled.div`
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   svg {
     height: 3rem;
     width: 3rem;
     transition: all ${transitionDurationEasing};
     &:hover {
-      fill: ${({theme}) => theme.primary};
+      fill: ${({theme}) => theme.primaryDark};
     }
   }
 `;
 
 const Contact = () => (
   <StyledContact>
-    <div>
+    <div className="links">
       {links.map(link => (
         <a key={link.label} href={link.href} title={link.label}>{link.icon ? link.icon : link.label}</a>
       ))}
