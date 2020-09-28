@@ -37,10 +37,17 @@ const Header = styled.header`
   top: 0;
   width: 100%;
   z-index: 1;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   a {
     color: inherit;
     margin-left: 1em;
     text-decoration-color: ${({theme}) => theme.primaryDark};
+    &.home {
+      margin: 0;
+    }
   }
 `;
 
@@ -50,10 +57,6 @@ const Footer = styled.footer`
 `;
 
 const links = [
-  {
-    href: '/',
-    label: 'home'
-  },
   {
     href: '/blog',
     label: 'blog'
@@ -71,6 +74,10 @@ const Layout = ({ children, currentPage }) => (
     </Head>
     <Header className="layout-header">
       {/*<Link href="/"><a><span>▲</span>Y</a></Link>*/}
+      {currentPage != "home"
+        ? <Link href="/"><a className="home">← home</a></Link>
+        : <div></div>
+      }
       <div className="links">
         {links.map(link => (
           currentPage != link.label && <Link key={link.label} href={link.href}>{link.label}</Link>
