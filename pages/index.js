@@ -41,11 +41,6 @@ const Blurb = styled.section`
   p {
     line-height: 1.5;
   }
-  a {
-    color: inherit;
-    font-variation-settings: 'wght' 525;
-    background-color: ${({theme}) => theme.primary};
-  }
 `;
 
 
@@ -65,18 +60,6 @@ const oldStyles = `
       color: inherit;
       font-size: 2.75rem;
       margin-bottom: 1em;
-    }
-  }
-  .hero-text {
-    p {
-      line-height: 1.5;
-      padding: 0 2.125rem;
-      text-align: left;
-    }
-    a {
-      color: inherit;
-      font-variation-settings: 'wght' 525;
-      background-color: ${({theme}) => theme.primary};
     }
   }
 `;
