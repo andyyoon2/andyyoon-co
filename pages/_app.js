@@ -21,6 +21,16 @@ const GlobalStyle = createGlobalStyle`
   ::selection {
     background: ${({theme}) => theme.tertiary};
   }
+  a {
+    color: inherit;
+    display: inline-block;
+    font-variation-settings: 'wght' 525;
+    text-decoration-color: #000;
+    transition: all ease-out 0.3s;
+    &:hover {
+      text-decoration-color: ${({theme}) => theme.primaryDark};
+    }
+  }
 `;
 
 export default function MyApp({ Component, pageProps }) {

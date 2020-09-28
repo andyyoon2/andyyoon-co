@@ -20,16 +20,6 @@ const Main = styled.main`
       font-variation-settings: 'wght' ${largeBoldWeight};
     }
   }
-  a {
-    color: inherit;
-    display: inline-block;
-    font-variation-settings: 'wght' ${mediumBoldWeight};
-    text-decoration-color: #000;
-    transition: all ease-out 0.3s;
-    &:hover {
-      text-decoration-color: ${({theme}) => theme.primaryDark};
-    }
-  }
 `;
 
 const Hero = styled.section`
