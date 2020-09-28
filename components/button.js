@@ -6,11 +6,15 @@ const StyledButton = styled.button`
   border-radius: 0.4em;
   box-shadow: 0 2px 4px ${({theme}) => theme.mediumGray};
   font-family: inherit;
-  padding: 1em 2em;
+  padding: 0;
   transition: all ease-out 0.24s;
   :hover {
-    translateY(-1px);
-    box-shadow: 0 4px 8px ${({theme}) => theme.lightGray};
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px ${({theme}) => theme.lightGray};
+  }
+  // Allow inner content to fill the button. Useful for links
+  > * {
+    padding: 1em 2em;
   }
 `;
 
