@@ -26,7 +26,7 @@ const links = [
   },
 ];
 
-const StyledContact = styled.section`
+const StyledContact = styled.div`
   svg {
     height: 3rem;
     width: 3rem;
@@ -39,7 +39,6 @@ const StyledContact = styled.section`
 
 const Contact = () => (
   <StyledContact>
-    <Heading tag="h2">Let's Connect</Heading>
     <div>
       {links.map(link => (
         <a key={link.label} href={link.href} title={link.label}>{link.icon ? link.icon : link.label}</a>
