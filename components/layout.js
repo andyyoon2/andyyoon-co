@@ -75,7 +75,7 @@ const Layout = ({ children, currentPage }) => (
     <Header className="layout-header">
       {/*<Link href="/"><a><span>▲</span>Y</a></Link>*/}
       {currentPage != "home"
-        ? <Link href="/"><a className="home">← home</a></Link>
+        ? <Link href="/"><a className="home">⟵ home</a></Link>
         : <div></div>
       }
       <div className="links">
