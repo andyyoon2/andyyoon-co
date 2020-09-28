@@ -1,203 +1,116 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Link from 'next/link';
+import styled from 'styled-components';
+import { Contact, Heading, Layout, YoonLink } from '../components';
+import { breakpoints } from '../styles';
+
+const largeBoldWeight = '600';
+const mediumBoldWeight = '525';
+
+const Main = styled.main`
+  min-height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+
+  section {
+    margin: 14rem 3rem;
+    line-height: 1.5;
+    h2 {
+      font-variation-settings: 'wght' ${largeBoldWeight};
+    }
+  }
+`;
+
+const Hero = styled.section`
+  text-align: left;
+  h1 {
+    font-size: 1.5rem;
+    span.line {
+      display: block;
+    }
+    span.keep-together {
+      display: inline-block;
+    }
+    .bold {
+      font-size: 1.5em;
+      font-variation-settings: 'wght' ${largeBoldWeight};
+    }
+    .highlight {
+      background-color: ${({theme}) => theme.primary};
+      font-variation-settings: 'wght' ${mediumBoldWeight};
+      padding: 2px;
+    }
+  }
+`;
+
+const Blurb = styled.section`
+`;
+
+const Connect = styled.section`
+  p {
+    margin-bottom: 3em;
+  }
+`;
+
+const List = styled.ul`
+  padding-left: 1.25em;
+  list-style: none;
+  font-size: 1.25rem;
+  li {
+    position: relative;
+    margin-bottom: 0.5em;
+  }
+`;
+const StyledListArrow = styled.span`
+  position: absolute;
+  top: -0.37em;
+  left: -0.75em;
+  font-size: 1.5em;
+`;
+const ListArrow = () => <StyledListArrow>⪧</StyledListArrow>;
 
 const Home = () => (
-  <div className="container">
+  <Layout currentPage="home">
     <Head>
-      <title>Create Next App</title>
+      <title>Andy Yoon</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
+    <Main>
+      <Hero>
+        <h1>
+          <span className="line">Welcome!</span>
+          <span className="line">I'm <span className="bold">Andy Yoon</span>,</span>
+          <span className="line">a <span className="highlight">web developer</span> and <span className="highlight">musician</span> based in <span className="keep-together">Los Angeles</span>.</span>
+        </h1>
+      </Hero>
+      <Blurb>
+        <p>I live to bring joy to others' lives and to influence people to be their best.</p>
+        <p>My mission is to work together with like-minded people to make a positive contribution to the world.</p>
+      </Blurb>
+      <section>
+        <h2>Work</h2>
+        <List>
+          <li><ListArrow /> Senior Frontend Engineer at <a href="https://enterprisealumni.com/">EnterpriseAlumni</a></li>
+          <li><Link href="/resume">See Resume</Link> ⟶</li>
+        </List>
+      </section>
+      <section>
+        <h2>Passion Projects</h2>
+        <List>
+          <li><ListArrow /> iOS Developer at <a href="https://tapfive.io/">TapFive</a></li>
+          <li><ListArrow /> Guitarist and Bandleader at <a href="https://www.instagram.com/nobathroombreaks/">No Bathroom Breaks</a></li>
+          <li><ListArrow /> Guitarist at <a href="http://roryseldon.com/index.html">Rory Seldon with InnerSession</a></li>
+        </List>
+      </section>
+      <Connect>
+        <h2>Let's Connect</h2>
+        <p>How can we help each other achieve our goals?</p>
+        <Contact />
+      </Connect>
+    </Main>
+  </Layout>
+);
 
-      <p className="description">
-        Get started by editing <code>pages/index.js</code>
-      </p>
-
-      <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with ZEIT Now.
-          </p>
-        </a>
-      </div>
-    </main>
-
-    <footer>
-      <a
-        href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-      </a>
-    </footer>
-
-    <style jsx>{`
-      .container {
-        min-height: 100vh;
-        padding: 0 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      main {
-        padding: 5rem 0;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer img {
-        margin-left: 0.5rem;
-      }
-
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .title a {
-        color: #0070f3;
-        text-decoration: none;
-      }
-
-      .title a:hover,
-      .title a:focus,
-      .title a:active {
-        text-decoration: underline;
-      }
-
-      .title {
-        margin: 0;
-        line-height: 1.15;
-        font-size: 4rem;
-      }
-
-      .title,
-      .description {
-        text-align: center;
-      }
-
-      .description {
-        line-height: 1.5;
-        font-size: 1.5rem;
-      }
-
-      code {
-        background: #fafafa;
-        border-radius: 5px;
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-
-      .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        max-width: 800px;
-        margin-top: 3rem;
-      }
-
-      .card {
-        margin: 1rem;
-        flex-basis: 45%;
-        padding: 1.5rem;
-        text-align: left;
-        color: inherit;
-        text-decoration: none;
-        border: 1px solid #eaeaea;
-        border-radius: 10px;
-        transition: color 0.15s ease, border-color 0.15s ease;
-      }
-
-      .card:hover,
-      .card:focus,
-      .card:active {
-        color: #0070f3;
-        border-color: #0070f3;
-      }
-
-      .card h3 {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
-      }
-
-      .card p {
-        margin: 0;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
-        }
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-    `}</style>
-  </div>
-)
-
-export default Home
+export default Home;
