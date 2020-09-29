@@ -24,11 +24,7 @@ const Main = styled.main`
 `;
 
 const Hero = styled.section`
-  // violet2 1 -> blue 2
-  // background: linear-gradient(160deg, #fae8ff, #b2e9ff);
   text-align: left;
-  // margin: 0 !important; // fix important later
-  // padding: 14rem 3rem;
   h1 {
     font-size: 1.5rem;
     font-variation-settings: 'wght' 320;
