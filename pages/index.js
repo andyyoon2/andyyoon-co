@@ -14,32 +14,39 @@ const Main = styled.main`
   position: relative;
 
   section {
-    margin: 14rem 3rem;
+    margin: 13rem 3rem;
     line-height: 1.5;
-    h2 {
-      font-variation-settings: 'wght' ${largeBoldWeight};
-      text-align: center;
-    }
+    // h2 {
+    //   font-variation-settings: 'wght' ${largeBoldWeight};
+    //   text-align: center;
+    // }
   }
 `;
 
 const Hero = styled.section`
+  font-size: 1.125rem;
+  font-variation-settings: 'wght' 320;
   text-align: left;
+
   h1 {
-    font-size: 1.5rem;
-    font-variation-settings: 'wght' 320;
-    span.line {
-      display: block;
-    }
+    font-size: inherit;
+    margin-bottom: 2em;
     span.keep-together {
       display: inline-block;
     }
-    .greeting {
-      font-size: 1.125rem;
+    .title {
+      font-size: 1.75rem;
     }
     .bold {
       font-variation-settings: 'wght' 720;
     }
+  }
+  h2 {
+    font-size: 1.25rem;
+    font-variation-settings: inherit;
+  }
+  span.line {
+    display: block;
   }
 `;
 
@@ -88,9 +95,9 @@ const Home = () => (
       <Hero>
         <h1>
           <span className="line greeting">Hi, I'm Andy Yoon</span>
-          <span className="line title">a <span className="bold">web developer</span> &amp; <span className="bold">musician</span> based in <span className="keep-together">Los Angeles</span></span>
+          <span className="line title"><span className="bold">web developer</span> &amp; <span className="bold">musician</span> based in <span className="keep-together">Los Angeles</span></span>
         </h1>
-        <p>My mission is to bring joy to others' lives and make a positive contribution to the world.</p>
+        <h2><span className="line">Pursuing my purpose &amp;</span> helping others pursue theirs</h2>
       </Hero>
       <section>
       </section>
