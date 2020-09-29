@@ -29,7 +29,11 @@ const StyledLayout = styled.div`
 `;
 
 const Header = styled.header`
-  background: linear-gradient(rgba(267, 251, 251, 0.85) 60%, rgba(267, 251, 251, 0.4) 80%, rgba(267, 251, 251, 0.1));
+  background: linear-gradient(
+    hsla(197, 12%, 98%, .85) 60%,
+    hsla(197, 12%, 98%, 0.4) 80%,
+    hsla(197, 12%, 98%, 0.1)
+  );
   padding: 1.25rem;
   padding-bottom: 2.5rem;
   text-align: right;
