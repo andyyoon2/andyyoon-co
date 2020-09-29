@@ -9,6 +9,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   body {
+    background-color: ${({theme}) => theme.white};
+    color: ${({theme}) => theme.black};
     font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
     * {
       box-sizing: border-box;
@@ -17,9 +19,6 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5 {
     // font-family: 'Questrial', 'Helvetica', 'Arial', sans-serif;
     font-weight: normal;
-  }
-  ::selection {
-    background: ${({theme}) => theme.tertiary};
   }
   a {
     color: inherit;

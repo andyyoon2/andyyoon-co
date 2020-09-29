@@ -24,23 +24,25 @@ const Main = styled.main`
 `;
 
 const Hero = styled.section`
+  // violet2 1 -> blue 2
+  // background: linear-gradient(160deg, #fae8ff, #b2e9ff);
   text-align: left;
+  // margin: 0 !important; // fix important later
+  // padding: 14rem 3rem;
   h1 {
     font-size: 1.5rem;
+    font-variation-settings: 'wght' 320;
     span.line {
       display: block;
     }
     span.keep-together {
       display: inline-block;
     }
-    .bold {
-      font-size: 1.5em;
-      font-variation-settings: 'wght' ${largeBoldWeight};
+    .greeting {
+      font-size: 1.125rem;
     }
-    .highlight {
-      background-color: ${({theme}) => theme.primary};
-      font-variation-settings: 'wght' ${mediumBoldWeight};
-      padding: 2px;
+    .bold {
+      font-variation-settings: 'wght' 720;
     }
   }
 `;
@@ -89,14 +91,12 @@ const Home = () => (
     <Main>
       <Hero>
         <h1>
-          <span className="line">Welcome!</span>
-          <span className="line">I'm <span className="bold">Andy Yoon</span>,</span>
-          <span className="line">a <span className="highlight">web developer</span> and <span className="highlight">musician</span> based in <span className="keep-together">Los Angeles</span>.</span>
+          <span className="line greeting">Hi, I'm Andy Yoon</span>
+          <span className="line title">a <span className="bold">web developer</span> &amp; <span className="bold">musician</span> based in <span className="keep-together">Los Angeles</span></span>
         </h1>
+        <p>My mission is to bring joy to others' lives and make a positive contribution to the world.</p>
       </Hero>
       <section>
-        <p>I live to bring joy to others' lives and to influence people to be their best.</p>
-        <p>My mission is to work together with like-minded people to make a positive contribution to the world.</p>
       </section>
       <Work>
         <h2>Work</h2>
