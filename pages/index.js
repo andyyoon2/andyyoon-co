@@ -14,8 +14,8 @@ const Main = styled.main`
   position: relative;
 
   section {
-    margin: 13rem 2.5rem;
     line-height: 1.5;
+    margin: 13rem 2.5rem;
     @media (min-width: 375px) {
       margin: 13rem 3rem;
     }
@@ -103,8 +103,8 @@ const Home = () => (
       </section>
       <Connect>
         <h2>Let's Connect</h2>
-        <p>How can we help each other achieve our goals?</p>
         <Contact />
+        <p>How can we help each other achieve our goals?</p>
       </Connect>
     </Main>
   </Layout>

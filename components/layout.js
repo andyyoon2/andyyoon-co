@@ -55,6 +55,7 @@ const Header = styled.header`
 `;
 
 const Footer = styled.footer`
+  font-size: 0.875rem;
   text-align: center;
   padding: 1.25rem;
   div {
