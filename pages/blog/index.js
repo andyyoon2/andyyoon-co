@@ -8,7 +8,7 @@ const BlogMain = styled.main`
   margin-top: 8rem;
 
   .heading {
-    margin-bottom: 8rem;
+    margin-bottom: 10rem;
   }
   h1 {
     margin: 2rem 0;
@@ -45,13 +45,19 @@ const PostWrapper = styled.div`
   }
   .number {
     color: ${({theme}) => theme.lightGray};
-    opacity: 0.7;
-    font-size: 4rem;
     margin: 0;
+    font-size: 2rem;
     position: absolute;
-    top: -0.18em;
-    left: -1.75em;
     z-index: -1;
+    top: -1.5em;
+    left: 0;
+    
+    @media (min-width: 768px) {
+      opacity: 0.8;
+      font-size: 4rem;
+      top: -0.18em;
+      left: -1.75em;
+    }
   }
 `;
 
