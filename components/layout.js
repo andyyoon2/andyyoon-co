@@ -2,6 +2,14 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+const LayoutWrapper = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const Header = styled.header`
   background: linear-gradient(
     hsla(197, 12%, 98%, 1),
@@ -61,7 +69,7 @@ const links = [
 ];
 
 const Layout = ({ children, currentPage }) => (
-  <div>
+  <LayoutWrapper>
     <Head>
       {/* TODO: add meta tags */}
     </Head>
@@ -82,7 +90,7 @@ const Layout = ({ children, currentPage }) => (
         <small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
       }
     </Footer>
-  </div>
+  </LayoutWrapper>
 );
 
 export default Layout;
