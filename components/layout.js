@@ -78,7 +78,9 @@ const Layout = ({ children, currentPage }) => (
     {children}
     <Footer>
       <div>© Andy Yoon 2020</div>
-      <small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
+      {currentPage === 'home' &&
+        <small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
+      }
     </Footer>
   </div>
 );
