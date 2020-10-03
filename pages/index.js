@@ -14,8 +14,11 @@ const Main = styled.main`
   position: relative;
 
   section {
-    margin: 13rem 3rem;
+    margin: 13rem 2.5rem;
     line-height: 1.5;
+    @media (min-width: 375px) {
+      margin: 13rem 3rem;
+    }
     // h2 {
     //   font-variation-settings: 'wght' ${largeBoldWeight};
     //   text-align: center;
@@ -30,15 +33,23 @@ const Hero = styled.section`
 
   h1 {
     font-size: inherit;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     span.keep-together {
       display: inline-block;
+    }
+    .greeting {
+      font-variation-settings: 'wght' 500;
     }
     .title {
       font-size: 1.75rem;
     }
     .bold {
       font-variation-settings: 'wght' 720;
+      // text-transform: capitalize;
+    }
+    .location {
+      // font-size: 0.875em;
+      font-variation-settings: 'wght' 320, 'slnt' -10;
     }
   }
   h2 {
@@ -95,7 +106,8 @@ const Home = () => (
       <Hero>
         <h1>
           <span className="line greeting">Hi, I'm Andy Yoon</span>
-          <span className="line title"><span className="bold">web developer</span> &amp; <span className="bold">musician</span> based in <span className="keep-together">Los Angeles</span></span>
+          <span className="line title"><span className="bold">web developer</span> &amp; <span className="bold">musician</span></span>
+          <span className="line location">based in <span className="keep-together">Los Angeles</span></span>
         </h1>
         <h2><span className="line">Pursuing my purpose &amp;</span> helping others pursue theirs</h2>
       </Hero>
