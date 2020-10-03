@@ -78,7 +78,7 @@ const Layout = ({ children, currentPage }) => (
         <Link href="/"><a className="home">andyyoon</a></Link>
         <div className="links">
           {links.map(link => (
-            currentPage != link.label && <Link key={link.label} href={link.href}>{link.label}</Link>
+            <Link key={link.label} href={link.href}>{link.label}</Link>
           ))}
         </div>
       </div>
