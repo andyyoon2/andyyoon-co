@@ -19,10 +19,10 @@ const Main = styled.main`
     @media (min-width: 375px) {
       margin: 13rem 3rem;
     }
-    // h2 {
-    //   font-variation-settings: 'wght' ${largeBoldWeight};
-    //   text-align: center;
-    // }
+
+    h2 {
+      margin-bottom: 2em;
+    }
   }
 `;
 
@@ -61,17 +61,6 @@ const Hero = styled.section`
   }
 `;
 
-const Work = styled.section`
-  text-align: center;
-  ul {
-    text-align: left;
-  }
-  button {
-    font-size: 1.125rem;
-    margin-top: 3rem;
-  }
-`;
-
 const Connect = styled.section`
   p {
     margin-bottom: 3em;
@@ -79,21 +68,13 @@ const Connect = styled.section`
 `;
 
 const List = styled.ul`
-  padding-left: 1.25em;
+  padding: 0;
   list-style: none;
-  font-size: 1.25rem;
   li {
     position: relative;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 `;
-const StyledListArrow = styled.span`
-  position: absolute;
-  top: -0.37em;
-  left: -0.75em;
-  font-size: 1.5em;
-`;
-const ListArrow = () => <StyledListArrow>⪧</StyledListArrow>;
 
 const Home = () => (
   <Layout currentPage="home">
@@ -112,19 +93,12 @@ const Home = () => (
         <h2><span className="line">Pursuing my purpose &amp;</span> helping others pursue theirs</h2>
       </Hero>
       <section>
-      </section>
-      <Work>
-        <h2>Work</h2>
+        <h2>What I Do</h2>
         <List>
-          <li><ListArrow /> Senior Frontend Engineer at <a href="https://enterprisealumni.com/">EnterpriseAlumni</a></li>
-        </List>
-        <Button><Link href="/resume"><a className="no-decoration">View Resume</a></Link></Button>
-      </Work>
-      <section>
-        <List>
-          <li><ListArrow /> iOS Developer at <a href="https://tapfive.io/">TapFive</a></li>
-          <li><ListArrow /> Guitarist and Bandleader at <a href="https://www.instagram.com/nobathroombreaks/">No Bathroom Breaks</a></li>
-          <li><ListArrow /> Guitarist at <a href="http://roryseldon.com/index.html">Rory Seldon with InnerSession</a></li>
+          <li>Senior Frontend Engineer at <a href="https://enterprisealumni.com/">EnterpriseAlumni</a></li>
+          <li>iOS Developer at <a href="https://tapfive.io/">TapFive</a></li>
+          <li>Guitarist &amp; Bandleader at <a href="https://www.instagram.com/nobathroombreaks/">No Bathroom Breaks</a></li>
+          <li>Guitarist at <a href="http://roryseldon.com/index.html">Rory Seldon with InnerSession</a></li>
         </List>
       </section>
       <Connect>
