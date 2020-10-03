@@ -1,35 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { pagePadding, transitionDurationEasing } from '../styles';
-
-const fontSize = '28px';
-const iconSize = '26px';
-const StyledLayout = styled.div`
-  padding: ${props => props.padding ? pagePadding : '0'};
-  header.layout-header {
-    a {
-      color: ${({theme}) => theme.primary};
-      font-size: ${fontSize};
-      text-decoration: none;
-      transition: all ${transitionDurationEasing};
-      span {
-        display: inline-block;
-        font-size: ${iconSize};
-        // transition: transform ${transitionDurationEasing};
-      }
-      &:hover {
-        color: ${({theme}) => theme.secondary};
-        // span {
-        //   transform: rotate(-90deg) translateY(-8px);
-        // }
-      }
-    }
-  }
-`;
 
 const Header = styled.header`
-  background: linear-gradient(rgba(255, 255, 255, 0.85) 60%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 0.1));
+  background: linear-gradient(
+    hsla(197, 12%, 98%, 1),
+    hsla(197, 12%, 98%, 0.8) 75%,
+    hsla(197, 12%, 98%, 0.1)
+  );
   padding: 1.25rem;
   padding-bottom: 2.5rem;
   text-align: right;
@@ -41,16 +19,21 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  a {
-    margin-left: 1em;
+  a.home {
     font-variation-settings: 'wght' 600;
-    &.home {
-      margin: 0;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
+  }
+  .links a {
+    margin-left: 1em;
+    font-variation-settings: 'wght' 420;
   }
 `;
 
 const Footer = styled.footer`
+  font-size: 0.875rem;
   text-align: center;
   padding: 1.25rem;
   div {
@@ -78,10 +61,7 @@ const Layout = ({ children, currentPage }) => (
       {/* TODO: add meta tags */}
     </Head>
     <Header className="layout-header">
-      {currentPage != "home"
-        ? <Link href="/"><a className="home">⟵ home</a></Link>
-        : <div></div>
-      }
+      <Link href="/"><a className="home">andyyoon</a></Link>
       <div className="links">
         {links.map(link => (
           currentPage != link.label && <Link key={link.label} href={link.href}>{link.label}</Link>

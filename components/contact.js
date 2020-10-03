@@ -39,9 +39,10 @@ const StyledContact = styled.div`
     height: 3rem;
     width: 3rem;
     transition: all ${transitionDurationEasing};
-    &:hover {
-      fill: ${({theme}) => theme.primaryDark};
-    }
+    fill: ${({theme}) => theme.black};
+    // &:hover {
+    //   fill: ${({theme}) => theme.primaryDark};
+    // }
   }
 `;
 

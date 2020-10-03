@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import '../styles/global.css';
 import theme from '../styles/theme';
@@ -9,17 +8,15 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   body {
+    background-color: ${({theme}) => theme.white};
+    color: ${({theme}) => theme.black};
     font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
     * {
       box-sizing: border-box;
     }
   }
   h1, h2, h3, h4, h5 {
-    // font-family: 'Questrial', 'Helvetica', 'Arial', sans-serif;
     font-weight: normal;
-  }
-  ::selection {
-    background: ${({theme}) => theme.tertiary};
   }
   a {
     color: inherit;
@@ -30,15 +27,15 @@ const GlobalStyle = createGlobalStyle`
     &:hover {
       text-decoration-color: ${({theme}) => theme.primaryDark};
     }
+    &.no-decoration {
+      text-decoration: none;
+    }
   }
 `;
 
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet"/>
-      </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
