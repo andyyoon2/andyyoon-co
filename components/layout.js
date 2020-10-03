@@ -16,9 +16,14 @@ const Header = styled.header`
   width: 100%;
   z-index: 1;
   
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  > * {
+    max-width: 720px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   a.home {
     font-variation-settings: 'wght' 600;
     text-decoration: none;
@@ -61,11 +66,13 @@ const Layout = ({ children, currentPage }) => (
       {/* TODO: add meta tags */}
     </Head>
     <Header className="layout-header">
-      <Link href="/"><a className="home">andyyoon</a></Link>
-      <div className="links">
-        {links.map(link => (
-          currentPage != link.label && <Link key={link.label} href={link.href}>{link.label}</Link>
-        ))}
+      <div>
+        <Link href="/"><a className="home">andyyoon</a></Link>
+        <div className="links">
+          {links.map(link => (
+            currentPage != link.label && <Link key={link.label} href={link.href}>{link.label}</Link>
+          ))}
+        </div>
       </div>
     </Header>
     {children}
