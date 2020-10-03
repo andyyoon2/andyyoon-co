@@ -3,31 +3,6 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { pagePadding, transitionDurationEasing } from '../styles';
 
-const fontSize = '28px';
-const iconSize = '26px';
-const StyledLayout = styled.div`
-  padding: ${props => props.padding ? pagePadding : '0'};
-  header.layout-header {
-    a {
-      color: ${({theme}) => theme.primary};
-      font-size: ${fontSize};
-      text-decoration: none;
-      transition: all ${transitionDurationEasing};
-      span {
-        display: inline-block;
-        font-size: ${iconSize};
-        // transition: transform ${transitionDurationEasing};
-      }
-      &:hover {
-        color: ${({theme}) => theme.secondary};
-        // span {
-        //   transform: rotate(-90deg) translateY(-8px);
-        // }
-      }
-    }
-  }
-`;
-
 const Header = styled.header`
   background: linear-gradient(
     hsla(197, 12%, 98%, .85) 60%,

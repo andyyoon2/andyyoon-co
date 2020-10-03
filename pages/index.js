@@ -1,11 +1,6 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import styled from 'styled-components';
-import { Button, Contact, Heading, Layout, YoonLink } from '../components';
-import { breakpoints } from '../styles';
-
-const largeBoldWeight = '600';
-const mediumBoldWeight = '525';
+import { Contact, Layout } from '../components';
 
 const Main = styled.main`
   min-height: 100vh;
