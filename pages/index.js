@@ -21,6 +21,7 @@ const Main = styled.main`
     }
 
     h2 {
+      font-variation-settings: 'wght' 320;
       margin-bottom: 2em;
     }
   }
@@ -37,18 +38,13 @@ const Hero = styled.section`
     span.keep-together {
       display: inline-block;
     }
-    .greeting {
-      font-variation-settings: 'wght' 500;
-    }
     .title {
       font-size: 1.75rem;
     }
     .bold {
       font-variation-settings: 'wght' 720;
-      // text-transform: capitalize;
     }
     .location {
-      // font-size: 0.875em;
       font-variation-settings: 'wght' 320, 'slnt' -10;
     }
   }
@@ -93,7 +89,7 @@ const Home = () => (
         <h2><span className="line">Pursuing my purpose &amp;</span> helping others pursue theirs</h2>
       </Hero>
       <section>
-        <h2>What I Do</h2>
+        <h2>Gigs</h2>
         <List>
           <li>Senior Frontend Engineer at <a href="https://enterprisealumni.com/">EnterpriseAlumni</a></li>
           <li>iOS Developer at <a href="https://tapfive.io/">TapFive</a></li>
