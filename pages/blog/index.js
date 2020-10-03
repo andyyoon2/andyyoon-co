@@ -47,8 +47,8 @@ const PostWrapper = styled.div`
     color: ${({theme}) => theme.lightGray};
     margin: 0;
     font-size: 2rem;
+    font-variation-settings: 'wght' 240;
     position: absolute;
-    z-index: -1;
     top: -1.5em;
     left: 0;
     
@@ -56,7 +56,7 @@ const PostWrapper = styled.div`
       opacity: 0.8;
       font-size: 4rem;
       top: -0.18em;
-      left: -1.75em;
+      left: -1.625em;
     }
   }
 `;
