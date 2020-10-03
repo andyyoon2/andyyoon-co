@@ -1,12 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { pagePadding, transitionDurationEasing } from '../styles';
 
 const Header = styled.header`
   background: linear-gradient(
-    hsla(197, 12%, 98%, .85) 60%,
-    hsla(197, 12%, 98%, 0.4) 80%,
+    hsla(197, 12%, 98%, 1),
+    hsla(197, 12%, 98%, 0.8) 75%,
     hsla(197, 12%, 98%, 0.1)
   );
   padding: 1.25rem;
@@ -20,12 +19,16 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  a {
-    margin-left: 1em;
+  a.home {
     font-variation-settings: 'wght' 600;
-    &.home {
-      margin: 0;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
+  }
+  .links a {
+    margin-left: 1em;
+    font-variation-settings: 'wght' 420;
   }
 `;
 
@@ -58,10 +61,7 @@ const Layout = ({ children, currentPage }) => (
       {/* TODO: add meta tags */}
     </Head>
     <Header className="layout-header">
-      {currentPage != "home"
-        ? <Link href="/"><a className="home">⟵ home</a></Link>
-        : <div></div>
-      }
+      <Link href="/"><a className="home">andyyoon</a></Link>
       <div className="links">
         {links.map(link => (
           currentPage != link.label && <Link key={link.label} href={link.href}>{link.label}</Link>
