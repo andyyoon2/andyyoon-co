@@ -1,12 +1,25 @@
 import Link from 'next/link';
+import styled from 'styled-components';
 import { Heading, Layout } from '../../components';
 import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib';
 
+const BlogPost = styled.main`
+  max-width: 680px;
+  margin: 0 auto;
+
+  .content {
+    font-size: 1.25rem;
+    padding: 1em;
+  }
+`;
+
 const Post = ({ post }) => (
   <Layout currentPage="blog">
-    <Heading tag="h1">{post.title}</Heading>
-    <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
-    <Link href="/">Home</Link>
+    <BlogPost>
+      <Heading tag="h1">{post.title}</Heading>
+      <div className="content" dangerouslySetInnerHTML={{ __html: post.content }}></div>
+      <Link href="/blog">← See all posts</Link>
+    </BlogPost>
   </Layout>
 );
 
