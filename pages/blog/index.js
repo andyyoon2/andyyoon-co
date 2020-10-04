@@ -95,7 +95,7 @@ const Blog = ({ posts }) => (
     <BlogMain>
       <div className="heading">
         <h1>Blog</h1>
-        <h2>Sharing my projects &amp; how I navigate life</h2>
+        <h2>Sharing how I navigate life &amp; discovering myself in a new medium</h2>
       </div>
       {posts.map((post, index) => (
         <Post post={post} number={posts.length - index} key={post.slug} />
