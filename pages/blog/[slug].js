@@ -8,6 +8,7 @@ const BlogPost = styled.main`
   margin: 0 auto;
 
   .content {
+    font-family: 'Lora', 'Times New Roman', serif;
     font-size: 1.25rem;
     padding: 1em;
   }
