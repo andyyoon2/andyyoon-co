@@ -5,18 +5,47 @@ import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib';
 
 const BlogPost = styled.main`
   max-width: 680px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 
-  .content {
+  h1, .content {
     font-family: 'Lora', 'Times New Roman', serif;
+  }
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-size: ${({theme}) => theme.h1FontSize};
+  }
+  .heading, .content {
+    margin-bottom: 10rem;
+  }
+  // TODO: DRY - Copied description and date styles from parent component
+  .description {
+    color: ${({theme}) => theme.darkGray};
+    font-size: 1.125rem;
+    font-variation-settings: 'wght' 420;
+  }
+  .date {
+    color: ${({theme}) => theme.darkGray};
+    font-variation-settings: 'wght' 320;
+    margin-bottom: 0;
+  }
+  .content {
     font-size: 1.25rem;
-    padding: 1em;
+    p {
+      margin: 2em 0;
+    }
   }
 `;
 
 const Post = ({ post }) => (
   <Layout currentPage="blog">
     <BlogPost>
-      <Heading tag="h1">{post.title}</Heading>
+      <div className="heading">
+        <h1>{post.title}</h1>
+        <h2 className="description">{post.description}</h2>
+        <p className="date">{post.date}</p>
+      </div>
       <div className="content" dangerouslySetInnerHTML={{ __html: post.content }}></div>
       <Link href="/blog">← See all posts</Link>
     </BlogPost>
