@@ -36,6 +36,9 @@ const PostWrapper = styled.div`
       }
     }
   }
+  p {
+    margin: 0.75em 0;
+  }
 
   .title {
     font-size: 1.375rem;
@@ -58,6 +61,7 @@ const PostWrapper = styled.div`
     margin: 0;
     font-size: 2rem;
     font-variation-settings: 'wght' 240;
+    line-height: 1.3;
     position: absolute;
     top: -1.5em;
     left: 0;

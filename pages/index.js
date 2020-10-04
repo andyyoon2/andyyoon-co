@@ -9,7 +9,6 @@ const Main = styled.main`
   position: relative;
 
   section {
-    line-height: 1.5;
     margin: 13rem 2.5rem;
     @media (min-width: 375px) {
       margin: 13rem 3rem;

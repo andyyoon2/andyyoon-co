@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({theme}) => theme.white};
     color: ${({theme}) => theme.black};
     font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.5;
     * {
       box-sizing: border-box;
     }
