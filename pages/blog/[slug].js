@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { Heading, Layout } from '../../components';
 import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib';
+import { formatDate } from '../../lib/client-side';
 
 const BlogPost = styled.main`
   max-width: 680px;
@@ -44,9 +45,10 @@ const Post = ({ post }) => (
       <div className="heading">
         <h1>{post.title}</h1>
         <h2 className="description">{post.description}</h2>
-        <p className="date">{post.date}</p>
+        <p className="date">{formatDate(post.date)}</p>
       </div>
       <div className="content" dangerouslySetInnerHTML={{ __html: post.content }}></div>
+      {/* TODO: Add some footer here to signify the article is over. Tags? */}
       <Link href="/blog">← See all posts</Link>
     </BlogPost>
   </Layout>

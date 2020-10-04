@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { Layout } from '../../components';
 import { getAllPosts } from '../../lib';
+import { formatDate } from '../../lib/client-side';
 
 const BlogMain = styled.main`
   margin-left: 3rem;
@@ -102,17 +103,6 @@ const Blog = ({ posts }) => (
     </BlogMain>
   </Layout>
 );
-
-// Assumes dateString is in format "YYYY-MM-DD"
-function formatDate(dateString) {
-  const dateParts = dateString.split('-');
-  const year = dateParts[0];
-  const month = parseInt(dateParts[1]);
-  const day = dateParts[2];
-  // Add extra element at beginning so months are 1-indexed
-  const months = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  return `${months[month]} ${day}, ${year}`;
-}
 
 // Formats numbers as 2-digits
 function formatPostNumber(number) {
