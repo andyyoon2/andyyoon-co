@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
       box-sizing: border-box;
     }
   }
+  main {
+    max-width: 420px;
+    margin: 0 auto;
+  }
   h1, h2, h3, h4, h5 {
     font-weight: normal;
   }

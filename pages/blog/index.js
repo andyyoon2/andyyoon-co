@@ -5,22 +5,21 @@ import { getAllPosts } from '../../lib';
 
 const BlogMain = styled.main`
   margin: 0 3rem;
-  margin-top: 8rem;
+  margin-top: 13rem;
 
   .heading {
     margin-bottom: 10rem;
   }
   h1 {
-    margin-bottom: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0.25em;
     font-variation-settings: 'wght' 620;
     font-size: ${({theme}) => theme.h1FontSize};
   }
   h2 {
+    margin-top: 0;
     font-variation-settings: 'wght' 320;
     font-size: ${({theme}) => theme.h2FontSize};
-    .line {
-      display: block;
-    }
   }
 `;
 
@@ -95,7 +94,7 @@ const Blog = ({ posts }) => (
     <BlogMain>
       <div className="heading">
         <h1>Blog</h1>
-        <h2><span className="line">Sharing my projects &amp;</span><span className="line">how I navigate life</span></h2>
+        <h2>Sharing my projects &amp; how I navigate life</h2>
       </div>
       {posts.map((post, index) => (
         <Post post={post} number={posts.length - index} key={post.slug} />

@@ -3,15 +3,17 @@ import styled from 'styled-components';
 import { Contact, Layout } from '../components';
 
 const Main = styled.main`
-  min-height: 100vh;
-  max-width: 500px;
-  margin: 0 auto;
   position: relative;
 
   section {
     margin: 13rem 2.5rem;
     @media (min-width: 375px) {
       margin: 13rem 3rem;
+    }
+    // <main> container max-width + gutter buffers
+    @media (min-width: 480px) {
+      margin-left: 0;
+      margin-right: 0;
     }
 
     h2 {
