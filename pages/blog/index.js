@@ -4,8 +4,8 @@ import { Layout } from '../../components';
 import { getAllPosts } from '../../lib';
 
 const BlogMain = styled.main`
-  margin: 0 3rem;
-  margin-top: 13rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 
   .heading {
     margin-bottom: 10rem;

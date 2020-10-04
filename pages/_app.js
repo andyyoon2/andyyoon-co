@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
   main {
     max-width: 420px;
     margin: 0 auto;
+    margin-top: 13rem;
   }
   h1, h2, h3, h4, h5 {
     font-weight: normal;

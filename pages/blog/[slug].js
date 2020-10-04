@@ -5,7 +5,6 @@ import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib';
 
 const BlogPost = styled.main`
   max-width: 680px;
-  margin: 0 auto;
 
   .content {
     font-family: 'Lora', 'Times New Roman', serif;

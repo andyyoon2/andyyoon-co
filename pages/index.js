@@ -7,6 +7,9 @@ const Main = styled.main`
 
   section {
     margin: 13rem 2.5rem;
+    &:first-child {
+      margin-top: 0;
+    }
     @media (min-width: 375px) {
       margin: 13rem 3rem;
     }
