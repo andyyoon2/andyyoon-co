@@ -11,11 +11,13 @@ const BlogMain = styled.main`
     margin-bottom: 10rem;
   }
   h1 {
-    margin: 2rem 0;
-    font-variation-settings: 'wght' 720;
+    margin-bottom: 0.5em;
+    font-variation-settings: 'wght' 620;
+    font-size: ${({theme}) => theme.h1FontSize};
   }
   h2 {
     font-variation-settings: 'wght' 320;
+    font-size: ${({theme}) => theme.h2FontSize};
   }
 `;
 
@@ -25,10 +27,15 @@ const PostWrapper = styled.div`
   a {
     display: inline-block;
     width: 100%;
+    &:hover {
+      .title {
+        text-decoration: underline;
+      }
+    }
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     font-variation-settings: 'wght' 620;
     margin-top: 0;
     margin-bottom: 1em;
