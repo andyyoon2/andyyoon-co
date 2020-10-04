@@ -18,6 +18,9 @@ const BlogMain = styled.main`
   h2 {
     font-variation-settings: 'wght' 320;
     font-size: ${({theme}) => theme.h2FontSize};
+    .line {
+      display: block;
+    }
   }
 `;
 
@@ -88,7 +91,7 @@ const Blog = ({ posts }) => (
     <BlogMain>
       <div className="heading">
         <h1>Blog</h1>
-        <h2>Thoughts about life and stuff</h2>
+        <h2><span className="line">Sharing my projects &amp;</span><span className="line">how I navigate life</span></h2>
       </div>
       {posts.map((post, index) => (
         <Post post={post} number={posts.length - index} key={post.slug} />
@@ -100,11 +103,12 @@ const Blog = ({ posts }) => (
 // Assumes dateString is in format "YYYY-MM-DD"
 function formatDate(dateString) {
   const dateParts = dateString.split('-');
-  const date = new Date();
-  date.setFullYear(dateParts[0]);
-  date.setMonth(parseInt(dateParts[1]) - 1); // month is 0-indexed
-  date.setDate(dateParts[2]);
-  return date.toDateString();
+  const year = dateParts[0];
+  const month = parseInt(dateParts[1]);
+  const day = dateParts[2];
+  // Add extra element at beginning so months are 1-indexed
+  const months = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  return `${months[month]} ${day}, ${year}`;
 }
 
 // Formats numbers as 2-digits
