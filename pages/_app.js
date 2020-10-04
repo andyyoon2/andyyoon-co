@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   main {
-    max-width: 420px;
+    max-width: ${({theme}) => theme.smallWrapperWidth};
     margin: 0 auto;
     margin-top: 13rem;
   }

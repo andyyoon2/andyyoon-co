@@ -14,6 +14,10 @@ const white = `hsl(${hue}, 12%, 98%)`;
 const h1FontSize = '3rem';
 const h2FontSize = '1.5rem';
 
+// Layout styles
+const wrapperWidth = '680px';
+const smallWrapperWidth = '420px';
+
 const theme = {
   primary: lightBlue,
   primaryDark: darkBlue,
@@ -25,6 +29,8 @@ const theme = {
   white: white,
   h1FontSize: h1FontSize,
   h2FontSize: h2FontSize,
+  wrapperWidth: wrapperWidth,
+  smallWrapperWidth: smallWrapperWidth,
 };
 
 export default theme;

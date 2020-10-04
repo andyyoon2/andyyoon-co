@@ -25,7 +25,7 @@ const Header = styled.header`
   z-index: 1;
   
   > * {
-    max-width: 720px;
+    max-width: ${({theme}) => theme.wrapperWidth};
     margin: 0 auto;
 
     display: flex;

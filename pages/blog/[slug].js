@@ -5,7 +5,7 @@ import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib';
 import { formatDate } from '../../lib/client-side';
 
 const BlogPost = styled.main`
-  max-width: 680px;
+  max-width: ${({theme}) => theme.wrapperWidth};
   margin-left: 2rem;
   margin-right: 2rem;
 
