@@ -2,6 +2,14 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+const LayoutWrapper = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const Header = styled.header`
   background: linear-gradient(
     hsla(197, 12%, 98%, 1),
@@ -17,7 +25,7 @@ const Header = styled.header`
   z-index: 1;
   
   > * {
-    max-width: 720px;
+    max-width: ${({theme}) => theme.wrapperWidth};
     margin: 0 auto;
 
     display: flex;
@@ -61,16 +69,17 @@ const links = [
 ];
 
 const Layout = ({ children, currentPage }) => (
-  <div>
+  <LayoutWrapper>
     <Head>
       {/* TODO: add meta tags */}
+      <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
     </Head>
     <Header className="layout-header">
       <div>
         <Link href="/"><a className="home">andyyoon</a></Link>
         <div className="links">
           {links.map(link => (
-            currentPage != link.label && <Link key={link.label} href={link.href}>{link.label}</Link>
+            <Link key={link.label} href={link.href}>{link.label}</Link>
           ))}
         </div>
       </div>
@@ -78,9 +87,11 @@ const Layout = ({ children, currentPage }) => (
     {children}
     <Footer>
       <div>© Andy Yoon 2020</div>
-      <small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
+      {currentPage === 'home' &&
+        <small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
+      }
     </Footer>
-  </div>
+  </LayoutWrapper>
 );
 
 export default Layout;

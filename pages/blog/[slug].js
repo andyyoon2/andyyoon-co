@@ -1,12 +1,56 @@
 import Link from 'next/link';
+import styled from 'styled-components';
 import { Heading, Layout } from '../../components';
 import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib';
+import { formatDate } from '../../lib/client-side';
+
+const BlogPost = styled.main`
+  max-width: ${({theme}) => theme.wrapperWidth};
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  h1, .content {
+    font-family: 'Lora', 'Times New Roman', serif;
+  }
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-size: ${({theme}) => theme.h1FontSize};
+  }
+  .heading, .content {
+    margin-bottom: 10rem;
+  }
+  // TODO: DRY - Copied description and date styles from parent component
+  .description {
+    color: ${({theme}) => theme.darkGray};
+    font-size: 1.125rem;
+    font-variation-settings: 'wght' 420;
+  }
+  .date {
+    color: ${({theme}) => theme.darkGray};
+    font-variation-settings: 'wght' 320;
+    margin-bottom: 0;
+  }
+  .content {
+    font-size: 1.25rem;
+    p {
+      margin: 2em 0;
+    }
+  }
+`;
 
 const Post = ({ post }) => (
   <Layout currentPage="blog">
-    <Heading tag="h1">{post.title}</Heading>
-    <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
-    <Link href="/">Home</Link>
+    <BlogPost>
+      <div className="heading">
+        <h1>{post.title}</h1>
+        <h2 className="description">{post.description}</h2>
+        <p className="date">{formatDate(post.date)}</p>
+      </div>
+      <div className="content" dangerouslySetInnerHTML={{ __html: post.content }}></div>
+      {/* TODO: Add some footer here to signify the article is over. Tags? */}
+      <Link href="/blog">← See all posts</Link>
+    </BlogPost>
   </Layout>
 );
 
@@ -14,7 +58,8 @@ const Post = ({ post }) => (
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
     'title',
-    // 'date',
+    'description',
+    'date',
     'slug',
     // 'author',
     'content',

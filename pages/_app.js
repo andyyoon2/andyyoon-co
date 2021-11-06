@@ -11,9 +11,15 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({theme}) => theme.white};
     color: ${({theme}) => theme.black};
     font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.5;
     * {
       box-sizing: border-box;
     }
+  }
+  main {
+    max-width: ${({theme}) => theme.smallWrapperWidth};
+    margin: 0 auto;
+    margin-top: 13rem;
   }
   h1, h2, h3, h4, h5 {
     font-weight: normal;
