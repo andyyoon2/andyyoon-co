@@ -1,9 +1,10 @@
 import Box from '@mui/material/Box';
+import Hero from '../components/Hero';
 
 export default function Home() {
   return (
-    <Box sx={{ backgroundColor: 'dodgerblue' }}>
-      <h1>Hello world</h1>
+    <Box>
+      <Hero />
     </Box>
   )
 }
