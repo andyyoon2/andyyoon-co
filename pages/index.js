@@ -1,17 +1,9 @@
-import Head from 'next/head';
+import Box from '@mui/material/Box';
 
 export default function Home() {
   return (
-    <div>
-      <Head>
-        <title>Andy Yoon</title>
-        <meta name="description" content="" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1>Hello world</h1>
-      </main>
-    </div>
+    <Box sx={{ backgroundColor: 'dodgerblue' }}>
+      <h1>Hello world</h1>
+    </Box>
   )
 }
