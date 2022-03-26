@@ -30,8 +30,8 @@ export default function Layout(props) {
       <ThemeProvider theme={theme}>
         <Container maxWidth="sm" sx={{
           // Ideally these should be applied to <body>, maybe update css-vars in createTheme
-          backgroundColor: 'background.default',
-          color: 'text.primary',
+          // backgroundColor: 'background.default',
+          // color: 'text.primary',
         }}>
           <Header />
           <main>

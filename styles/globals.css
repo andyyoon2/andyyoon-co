@@ -4,6 +4,27 @@ html { font-family: 'Inter', sans-serif; }
   html { font-family: 'Inter var', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
 }
 
+/**
+ * THEME
+ */
+:root {
+  --color-light-text: hsla(256, 20%, 10%, 1);
+  --color-light-bg: hsla(256, 20%, 90%, 1);
+  --color-dark-text: hsla(256, 10%, 95%, 0.8);
+  --color-dark-bg: hsla(256, 8%, 15%, 1);
+}
+
+html {
+  color: var(--color-light-text);
+  background-color: var(--color-light-bg);
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color: var(--color-dark-text);
+    background-color: var(--color-dark-bg);
+  }
+}
+
 html,
 body {
   padding: 0;
