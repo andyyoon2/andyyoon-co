@@ -4,7 +4,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 // Based off colors from globals.css
 const lightGradient = 'linear-gradient(rgba(255, 255, 255, 0.85) 60%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 0.1))';
-const darkGradient = 'linear-gradient(hsla(256, 0%, 8%, 0.85) 60%, hsla(256, 0%, 8%, 0.4) 80%, hsla(256, 0%, 8%, 0.1))';
+const darkGradient = 'linear-gradient(hsla(256, 0%, 15%, 0.85) 60%, hsla(256, 0%, 15%, 0.4) 80%, hsla(256, 0%, 15%, 0.1))';
 
 export default function Header() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
