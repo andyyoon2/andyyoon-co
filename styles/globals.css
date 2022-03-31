@@ -11,7 +11,7 @@ html { font-family: 'Inter', sans-serif; }
   --color-light-text: hsla(256, 20%, 10%, 1);
   --color-light-bg: hsla(256, 20%, 90%, 1);
   --color-dark-text: hsla(256, 10%, 95%, 0.8);
-  --color-dark-bg: hsla(256, 8%, 15%, 1);
+  --color-dark-bg: hsla(256, 0%, 8%, 1);
 }
 
 html {
