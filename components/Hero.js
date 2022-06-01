@@ -17,13 +17,12 @@ export default function Hero() {
         <Bold>Web developer</Bold> &amp; <Bold>musician</Bold> based in
         <KeepTogether>Los Angeles</KeepTogether>
       </Box>
-      <Box component="h2" sx={{
+      {/*<Box component="h2" sx={{
         fontWeight: 300,
         fontSize: '1.25rem',
         fontStyle: 'italic',
       }}>
-        My mission is to use my skills to serve others and make a tangible positive contribution to the world.
-      </Box>
+      </Box>*/}
     </Box>
   );
 }
