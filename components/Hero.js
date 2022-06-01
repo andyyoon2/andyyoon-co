@@ -1,32 +1,29 @@
 import Box from '@mui/material/Box';
-
-const KeepTogether = ({ children }) => (
-  <Box component="span" sx={{ display: 'inline-block' }}>{children}</Box>
-);
-
-const Heading1 = ({ children }) => (
-  <Box component="h1" sx={{
-    fontWeight: 300,
-  }}>{children}</Box>
-);
-
-const Heading2 = ({ children }) => (
-  <Box component="h2" sx={{
-    fontWeight: 400,
-    fontStyle: 'italic',
-  }}>{children}</Box>
-);
+import { Bold, KeepTogether } from './shared';
 
 export default function Hero() {
   return (
-    <>
-      <Box>
-        <Heading1>Welcome! <KeepTogether>I'm Andy Yoon</KeepTogether></Heading1>
-        <Heading2>
-          <span>A web developer and musician based in </span>
-          <KeepTogether>Los Angeles</KeepTogether>
-        </Heading2>
+    <Box sx={{ marginTop: '4rem' }}>
+      <Box component="h3" sx={{
+        fontWeight: 300,
+        fontSize: '1.75rem',
+      }}>
+        Hi, I'm <KeepTogether>Andy Yoon</KeepTogether>
       </Box>
-    </>
+      <Box component="h1" sx={{
+        fontWeight: 350,
+        fontSize: '2rem',
+      }}>
+        <Bold>Web developer</Bold> &amp; <Bold>musician</Bold> based in
+        <KeepTogether>Los Angeles</KeepTogether>
+      </Box>
+      <Box component="h2" sx={{
+        fontWeight: 300,
+        fontSize: '1.25rem',
+        fontStyle: 'italic',
+      }}>
+        My mission is to use my skills to serve others and make a tangible positive contribution to the world.
+      </Box>
+    </Box>
   );
 }
