@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { getAllPosts } from '../lib';
-import { formatDate } from '../lib/client-side';
+import { getAllPosts } from '../../lib';
+import { formatDate } from '../../lib/client-side';
 
 const pStyle = { marginTop: 0, marginBottom: '0.75em' };
 
@@ -61,7 +61,7 @@ const Post = ({ post, number }) => (
 export default function Blog({ posts }) {
   return (
     // TODO: `main` can go into global styles
-    <Box component="main" sx={{
+    <Box sx={{
       maxWidth: '480px',
       margin: '0 3rem',
       marginTop: '160px',
