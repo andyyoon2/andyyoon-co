@@ -7,7 +7,11 @@ import { formatDate } from '../../lib/client-side';
 const pStyle = { marginTop: 0, marginBottom: '0.75em' };
 
 const Post = ({ post, number }) => (
-  <Box sx={{ marginBottom: '6rem', position: 'relative' }}>
+  <Box sx={{
+    marginBottom: '6rem',
+    marginLeft: { sm: '6.25em' },
+    position: 'relative'
+  }}>
     <Link href={`/blog/${post.slug}`} passHref>
       <Box component="a" sx={{
         display: 'inline-block',
@@ -63,8 +67,8 @@ export default function Blog({ posts }) {
     // TODO: `main` can go into global styles
     <Box sx={{
       maxWidth: '480px',
-      margin: '0 3rem',
-      marginTop: '160px',
+      margin: { xs: '0 3rem', sm: '0 auto' },
+      marginTop: '160px !important',
     }}>
       <Box className="heading" sx={{ marginBottom: '10rem' }}>
         <Typography variant="h1" sx={{

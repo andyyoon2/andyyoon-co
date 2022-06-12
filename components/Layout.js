@@ -44,7 +44,7 @@ export default function Layout(props) {
       </Head>
 
       <ThemeProvider theme={theme}>
-        <Container maxWidth="md" sx={{
+        <Container maxWidth="sm" sx={{
           // Ideally these should be applied to <body>, maybe update css-vars in createTheme
           // backgroundColor: 'background.default',
           // color: 'text.primary',

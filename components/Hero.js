@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import { Bold, KeepTogether } from './shared';
+import { Bold, Block, KeepTogether } from './shared';
 
 export default function Hero() {
   return (
@@ -8,16 +8,18 @@ export default function Hero() {
         fontWeight: 300,
         fontSize: '1.75rem',
       }}>
-        Hi, I'm <KeepTogether>Andy Yoon</KeepTogether>
+        Hi, I'm <Bold><KeepTogether>Andy Yoon</KeepTogether></Bold>
       </Box>
       <Box component="h1" sx={{
         fontWeight: 350,
         fontSize: '2rem',
       }}>
-        <Bold>Web developer</Bold> &amp; <Bold>musician</Bold> based in
-        <KeepTogether>Los Angeles</KeepTogether>
+        <Block sx={{ marginBottom: '0.25em' }}>Frontend Developer &amp; Musician</Block>
+        <Block>based in&nbsp;<KeepTogether>Los Angeles</KeepTogether></Block>
       </Box>
-      {/*<Box component="h2" sx={{
+
+      {/* TODO Jun 12: Mission statement or tagline
+      <Box component="h2" sx={{
         fontWeight: 300,
         fontSize: '1.25rem',
         fontStyle: 'italic',
