@@ -15,6 +15,22 @@ export default function Layout(props) {
         palette: {
           mode: prefersDarkMode ? 'dark' : 'light',
         },
+        typography: {
+          fontFamily: [
+            'Inter var',
+            'Inter',
+            '-apple-system',
+            'BlinkMacSystemFont',
+            '"Segoe UI"',
+            'Roboto',
+            '"Helvetica Neue"',
+            'Arial',
+            'sans-serif',
+            '"Apple Color Emoji"',
+            '"Segoe UI Emoji"',
+            '"Segoe UI Symbol"',
+          ].join(','),
+        },
       }),
     [prefersDarkMode],
   );
@@ -28,10 +44,11 @@ export default function Layout(props) {
       </Head>
 
       <ThemeProvider theme={theme}>
-        <Container maxWidth="sm" sx={{
+        <Container maxWidth="md" sx={{
           // Ideally these should be applied to <body>, maybe update css-vars in createTheme
           // backgroundColor: 'background.default',
           // color: 'text.primary',
+          padding: 0,
         }}>
           <Header />
           <main>
