@@ -64,11 +64,8 @@ const Post = ({ post, number }) => (
 
 export default function Blog({ posts }) {
   return (
-    // TODO: `main` can go into global styles
     <Box sx={{
-      maxWidth: '480px',
       margin: { xs: '0 3rem', sm: '0 auto' },
-      marginTop: '160px !important',
     }}>
       <Box className="heading" sx={{ marginBottom: '10rem' }}>
         <Typography variant="h1" sx={{

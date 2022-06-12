@@ -9,10 +9,11 @@ html { font-family: 'Inter', sans-serif; }
  * THEME
  */
 :root {
-  --color-light-text: hsla(256, 20%, 10%, 1);
-  --color-light-bg: hsla(256, 20%, 90%, 1);
-  --color-dark-text: hsla(256, 0%, 100%, 0.85);
-  --color-dark-bg: hsla(256, 0%, 15%, 1);
+  --primary-hue: 256;
+  --color-light-text: hsla(var(--primary-hue), 20%, 10%, 1);
+  --color-light-bg: hsla(var(--primary-hue), 10%, 95%, 1);
+  --color-dark-text: hsla(var(--primary-hue), 0%, 100%, 0.85);
+  --color-dark-bg: hsla(var(--primary-hue), 0%, 15%, 1);
 }
 
 html {

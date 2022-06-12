@@ -49,6 +49,7 @@ export default function Layout(props) {
           // backgroundColor: 'background.default',
           // color: 'text.primary',
           padding: 0,
+          paddingTop: '160px',
         }}>
           <Header />
           <main>
