@@ -16,7 +16,6 @@ const Post = ({ post, number }) => (
       <Box component="a" sx={{
         display: 'inline-block',
         textDecoration: 'none',
-        width: '100%',
         '&:hover': {
           '.title': { textDecoration: 'underline' },
         },
