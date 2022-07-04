@@ -29,7 +29,7 @@ export default function Hero() {
       <WorkLine
         title="Guitarist and Bandleader"
         place="No Bathroom Breaks"
-        url=""
+        url="https://instagram.com/nobathroombreaks"
       />
     </section>
   );

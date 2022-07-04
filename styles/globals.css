@@ -33,6 +33,10 @@ body {
   margin: 0;
 }
 
+section {
+  margin-bottom: 4rem;
+}
+
 a {
   color: inherit;
   /*text-decoration: none;*/

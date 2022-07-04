@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import Box from '@mui/material/Box';
 import { Bold, Block, KeepTogether } from './shared';
 
 export default function Hero() {
   return (
-    <Box sx={{ marginTop: '4rem' }}>
+    <Box component="section" sx={{ marginTop: '4rem' }}>
       <Box component="h3" sx={{
         fontWeight: 300,
         fontSize: '1.75rem',
@@ -18,13 +19,18 @@ export default function Hero() {
         <Block>based in&nbsp;<KeepTogether>Los Angeles</KeepTogether></Block>
       </Box>
 
-      {/* TODO Jun 12: Mission statement or tagline
+      {/*TODO Jun 12: Mission statement or tagline*/}
       <Box component="h2" sx={{
         fontWeight: 300,
         fontSize: '1.25rem',
         fontStyle: 'italic',
+        marginTop: '3rem',
       }}>
-      </Box>*/}
+        <Block>🌱 This site is still growing.</Block>
+        <Block>
+          For now, please <Link href="/blog"><a>check out my Blog! →</a></Link>
+        </Block>
+      </Box>
     </Box>
   );
 }
