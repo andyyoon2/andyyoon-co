@@ -7,14 +7,20 @@ import { useBlogPost } from '../hooks/useBlogPost';
 
 // Based off colors from globals.css
 const lightGradient = `
-  linear-gradient(hsla(var(--primary-hue), 10%, 95%, 0.85) 60%,
-  hsla(var(--primary-hue), 10%, 95%, 0.4) 80%,
-  hsla(var(--primary-hue), 10%, 95%, 0.1))
+  linear-gradient(
+    hsla(var(--primary-hue), 10%, 95%, 1) 25%,
+    hsla(var(--primary-hue), 10%, 95%, 0.85) 60%,
+    hsla(var(--primary-hue), 10%, 95%, 0.4) 80%,
+    hsla(var(--primary-hue), 10%, 95%, 0.1)
+  )
 `;
 const darkGradient = `
-  linear-gradient(hsla(var(--primary-hue), 0%, 15%, 0.85) 60%,
-  hsla(var(--primary-hue), 0%, 15%, 0.4) 80%,
-  hsla(var(--primary-hue), 0%, 15%, 0.1))
+  linear-gradient(
+    hsla(var(--primary-hue), 0%, 15%, 1) 25%,
+    hsla(var(--primary-hue), 0%, 15%, 0.85) 60%,
+    hsla(var(--primary-hue), 0%, 15%, 0.4) 80%,
+    hsla(var(--primary-hue), 0%, 15%, 0.1)
+  )
 `;
 
 const Anchor = styled('a')({
