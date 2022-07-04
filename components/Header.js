@@ -25,7 +25,6 @@ const darkGradient = `
 
 const Anchor = styled('a')({
   cursor: 'pointer',
-  marginRight: '1em',
   '&:hover': { textDecoration: 'underline' },
 });
 
@@ -39,22 +38,29 @@ export default function Header() {
       <Box sx={{
         position: 'fixed',
         top: 0,
-        width: { xs: '100%', sm: 'calc(100% - 48px)' },
-        // Must match maxWidth on <Container> in <Layout> minus padding
-        maxWidth: isBlogPost ? '852px' : '552px',
+        left: 0,
+        right: 0,
         background: prefersDarkMode ? darkGradient : lightGradient,
         paddingTop: '1.25rem',
         paddingBottom: '2.5rem',
-        paddingLeft: { xs: '3rem', sm: 0 }, // left-right padding matches <Blog>
-        paddingRight: { xs: '3rem', sm: 0 },
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        paddingLeft: { xs: '3rem', sm: '24px' }, // left-right padding matches <Blog>
+        paddingRight: { xs: '3rem', sm: '24px' },
+        textAlign: 'center',
       }}>
-        <Link href="/"><Anchor><Bold>andyyoon.co</Bold></Anchor></Link>
-        <nav>
-          <Link href="/blog"><Anchor>blog</Anchor></Link>
-        </nav>
+        <Box sx={{
+          margin: '0 auto',
+          width: '100%',
+          // Must match maxWidth on <Container> in <Layout> minus padding
+          maxWidth: isBlogPost ? '852px' : '552px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}>
+          <Link href="/"><Anchor><Bold>andyyoon.co</Bold></Anchor></Link>
+          <nav>
+            <Link href="/blog"><Anchor>blog</Anchor></Link>
+          </nav>
+        </Box>
       </Box>
     </header>
   );
