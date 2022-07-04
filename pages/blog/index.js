@@ -75,13 +75,13 @@ export default function Blog({ posts }) {
         }}>
           Blog
         </Typography>
-        <Typography variant="h2" sx={{
+        {/*<Typography variant="h2" sx={{
           fontSize: '1.5rem',
           fontWeight: '300',
           marginTop: '0',
         }}>
-          {/*Sharing how I navigate life &amp; discovering myself in a new medium*/}
-        </Typography>
+          Sharing how I navigate life &amp; discovering myself in a new medium
+        </Typography>*/}
       </Box>
       {posts.map((post, index) => (
         <Post post={post} number={posts.length - index} key={post.slug} />
