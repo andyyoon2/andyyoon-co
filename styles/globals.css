@@ -1,14 +1,53 @@
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+}
+
+/**
+ * THEME
+ */
+:root {
+  --primary-hue: 256;
+  --color-light-text: hsla(var(--primary-hue), 20%, 10%, 1);
+  --color-light-bg: hsla(var(--primary-hue), 10%, 95%, 1);
+  --color-light-gray-text: hsla(var(--primary-hue), 0%, 42%, 1);
+  --color-dark-text: hsla(var(--primary-hue), 0%, 100%, 0.85);
+  --color-dark-bg: hsla(var(--primary-hue), 0%, 15%, 1);
+  --color-dark-gray-text: hsla(var(--primary-hue), 0%, 62%, 1);
+}
+
+html {
+  color: var(--color-light-text);
+  background-color: var(--color-light-bg);
+}
+.gray-text {
+  color: var(--color-light-gray-text);
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color: var(--color-dark-text);
+    background-color: var(--color-dark-bg);
+  }
+  .gray-text {
+    color: var(--color-dark-gray-text);
+  }
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+section {
+  margin-bottom: 4rem;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
+  /*text-decoration: none;*/
 }
 
 * {
