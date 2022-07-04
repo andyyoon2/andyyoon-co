@@ -12,18 +12,26 @@ html { font-family: 'Inter', sans-serif; }
   --primary-hue: 256;
   --color-light-text: hsla(var(--primary-hue), 20%, 10%, 1);
   --color-light-bg: hsla(var(--primary-hue), 10%, 95%, 1);
+  --color-light-gray-text: hsla(var(--primary-hue), 0%, 42%, 1);
   --color-dark-text: hsla(var(--primary-hue), 0%, 100%, 0.85);
   --color-dark-bg: hsla(var(--primary-hue), 0%, 15%, 1);
+  --color-dark-gray-text: hsla(var(--primary-hue), 0%, 62%, 1);
 }
 
 html {
   color: var(--color-light-text);
   background-color: var(--color-light-bg);
 }
+.gray-text {
+  color: var(--color-light-gray-text);
+}
 @media (prefers-color-scheme: dark) {
   html {
     color: var(--color-dark-text);
     background-color: var(--color-dark-bg);
+  }
+  .gray-text {
+    color: var(--color-dark-gray-text);
   }
 }
 

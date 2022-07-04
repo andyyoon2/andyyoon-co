@@ -28,14 +28,14 @@ export default function Post({ post }) {
         }}>
           {post.title}
         </Typography>
-        <Typography variant="h2" sx={{
+        <Typography variant="h2" className="gray-text" sx={{
           fontSize: '1.125rem',
           fontWeight: 400,
           margin: '0.85em 0',
         }}>
           {post.description}
         </Typography>
-        <Typography variant="body1" sx={{
+        <Typography variant="body1" className="gray-text" sx={{
           fontWeight: 300,
           marginBottom: 0,
         }}>
