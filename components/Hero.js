@@ -9,7 +9,7 @@ export default function Hero() {
         fontWeight: 300,
         fontSize: '1.75rem',
       }}>
-        Hi, I'm <Bold><KeepTogether>Andy Yoon</KeepTogether></Bold>
+        Hi, I&apos;m <Bold><KeepTogether>Andy Yoon</KeepTogether></Bold>
       </Box>
       <Box component="h1" sx={{
         fontWeight: 350,
