@@ -26,11 +26,11 @@ export default function Hero() {
         place="TapFive"
         url="https://tapfive.dev/"
       />
-      <WorkLine
+      {/*<WorkLine
         title="Guitarist and Bandleader"
         place="No Bathroom Breaks"
         url="https://instagram.com/nobathroombreaks"
-      />
+      />*/}
     </section>
   );
 }
