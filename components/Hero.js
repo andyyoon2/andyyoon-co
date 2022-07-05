@@ -4,10 +4,11 @@ import { Bold, Block, KeepTogether } from './shared';
 
 export default function Hero() {
   return (
-    <Box component="section" sx={{ marginTop: '4rem' }}>
+    <Box component="section">
       <Box component="h3" sx={{
         fontWeight: 300,
         fontSize: '1.75rem',
+        marginTop: 0,
       }}>
         Hi, I&apos;m <Bold><KeepTogether>Andy Yoon</KeepTogether></Bold>
       </Box>
@@ -28,7 +29,10 @@ export default function Hero() {
       }}>
         <Block>🌱 This site is still growing.</Block>
         <Block>
-          For now, please <Link href="/blog"><a>check out my Blog! →</a></Link>
+          For now, please&nbsp;
+          <KeepTogether>
+            <Link href="/blog"><a>check out my blog! →</a></Link>
+          </KeepTogether>
         </Block>
       </Box>
     </Box>

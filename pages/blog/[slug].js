@@ -17,7 +17,7 @@ const serifFontFamily = '"Lora", "Times New Roman", sans-serif';
 export default function Post({ post }) {
   return (
     <Box sx={{
-      margin: { xs: '0 3rem', sm: '0 auto' },
+      margin: '0 auto',
       marginBottom: '160px !important',
     }}>
       <Box sx={{ marginBottom: '120px' }}>
