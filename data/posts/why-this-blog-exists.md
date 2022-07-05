@@ -4,8 +4,8 @@ description: "My purpose and mindset behind starting this blog"
 date: "2022-07-04"
 ---
 
-> *“Start with Why.”*  
-— Simon Sinek
+> “He who has a *why* to live can bear almost any *how*.”  
+— Friedrich Nietzsche
 > 
 
 When starting a new project, the first question we should ask ourselves is, “Why?” Why do we do what we do? Why do we feel the need to create? Why do we live the way we live?
