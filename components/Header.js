@@ -43,8 +43,8 @@ export default function Header() {
         background: prefersDarkMode ? darkGradient : lightGradient,
         paddingTop: '1.25rem',
         paddingBottom: '2.5rem',
-        paddingLeft: { xs: '3rem', sm: '24px' }, // left-right padding matches <Blog>
-        paddingRight: { xs: '3rem', sm: '24px' },
+        paddingLeft: { xs: '16px', sm: '24px' }, // left-right padding matches <Blog>
+        paddingRight: { xs: '16px', sm: '24px' },
         textAlign: 'center',
       }}>
         <Box sx={{

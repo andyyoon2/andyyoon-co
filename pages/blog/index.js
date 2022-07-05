@@ -63,9 +63,7 @@ const Post = ({ post, number }) => (
 
 export default function Blog({ posts }) {
   return (
-    <Box sx={{
-      margin: { xs: '0 3rem', sm: '0 auto' },
-    }}>
+    <Box sx={{ margin: '0 auto' }}>
       <Box className="heading" sx={{ marginBottom: '10rem' }}>
         <Typography variant="h1" sx={{
           fontSize: '3rem',

@@ -47,10 +47,6 @@ export default function Layout(props) {
 
       <ThemeProvider theme={theme}>
         <Container maxWidth={isBlogPost ? 'md' : 'sm'} sx={{
-          // Ideally these should be applied to <body>, maybe update css-vars in createTheme
-          // backgroundColor: 'background.default',
-          // color: 'text.primary',
-          padding: 0,
           paddingTop: '160px',
         }}>
           <Header />
