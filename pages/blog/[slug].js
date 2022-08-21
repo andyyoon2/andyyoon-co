@@ -6,11 +6,17 @@ import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib';
 import { formatDate } from '../../lib/client-side';
 
 const PostContent = styled('div')({
-  p: {
+  'p, li': {
     fontSize: '1.25rem',
-    margin: '2em 0',
     lineHeight: 1.5
-  }
+  },
+  'blockquote:first-of-type': {
+    marginBottom: '3em',
+  },
+  h2: {
+    marginTop: '1.5em',
+    marginBottom: '1em',
+  },
 });
 const serifFontFamily = '"Lora", "Times New Roman", sans-serif';
 
