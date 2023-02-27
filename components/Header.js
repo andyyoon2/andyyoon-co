@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
-import useMediaQuery from '@mui/material/useMediaQuery';
+// import useMediaQuery from '@mui/material/useMediaQuery';
 import { Bold } from './shared';
 
 // Based off colors from globals.css
@@ -13,14 +13,14 @@ const lightGradient = `
     hsla(var(--primary-hue), 10%, 95%, 0.1)
   )
 `;
-const darkGradient = `
-  linear-gradient(
-    hsla(var(--primary-hue), 0%, 15%, 1) 25%,
-    hsla(var(--primary-hue), 0%, 15%, 0.85) 60%,
-    hsla(var(--primary-hue), 0%, 15%, 0.4) 80%,
-    hsla(var(--primary-hue), 0%, 15%, 0.1)
-  )
-`;
+// const darkGradient = `
+//   linear-gradient(
+//     hsla(var(--primary-hue), 0%, 15%, 1) 25%,
+//     hsla(var(--primary-hue), 0%, 15%, 0.85) 60%,
+//     hsla(var(--primary-hue), 0%, 15%, 0.4) 80%,
+//     hsla(var(--primary-hue), 0%, 15%, 0.1)
+//   )
+// `;
 
 const Anchor = styled('a')({
   cursor: 'pointer',
@@ -28,7 +28,7 @@ const Anchor = styled('a')({
 });
 
 export default function Header() {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   return (
     // TODO Jun 12: Can DRY these styles with other pages
@@ -38,7 +38,7 @@ export default function Header() {
         top: 0,
         left: 0,
         right: 0,
-        background: prefersDarkMode ? darkGradient : lightGradient,
+        background: lightGradient,//prefersDarkMode ? darkGradient : lightGradient,
         paddingTop: '1.25rem',
         paddingBottom: '2.5rem',
         paddingLeft: { xs: '16px', sm: '24px' }, // left-right padding matches <Blog>

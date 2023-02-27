@@ -3,18 +3,18 @@ import Head from 'next/head';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+// import useMediaQuery from '@mui/material/useMediaQuery';
 import Header from './Header';
 
 export default function Layout(props) {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   const theme = useMemo(
     () =>
       createTheme({
-        palette: {
-          mode: prefersDarkMode ? 'dark' : 'light',
-        },
+        // palette: {
+        //   mode: prefersDarkMode ? 'dark' : 'light',
+        // },
         typography: {
           fontFamily: [
             'Inter var',
@@ -32,7 +32,7 @@ export default function Layout(props) {
           ].join(','),
         },
       }),
-    [prefersDarkMode],
+    [], // [prefersDarkMode],
   );
 
   return (

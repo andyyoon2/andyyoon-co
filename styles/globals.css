@@ -25,7 +25,7 @@ html {
 .gray-text {
   color: var(--color-light-gray-text);
 }
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color: var(--color-dark-text);
     background-color: var(--color-dark-bg);
@@ -33,7 +33,7 @@ html {
   .gray-text {
     color: var(--color-dark-gray-text);
   }
-}
+} */
 
 html,
 body {
