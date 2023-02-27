@@ -9,7 +9,8 @@ html { font-family: 'Inter', sans-serif; }
  * THEME
  */
 :root {
-  --primary-hue: 256;
+  --primary-hue: 220.7;
+  --color-primary: hsl(220.7, 80.5%, 53.7%); /* #2a67e8 */
   --color-light-text: hsla(var(--primary-hue), 20%, 10%, 1);
   --color-light-bg: hsla(var(--primary-hue), 10%, 95%, 1);
   --color-light-gray-text: hsla(var(--primary-hue), 0%, 42%, 1);
@@ -47,7 +48,11 @@ section {
 
 a {
   color: inherit;
-  /*text-decoration: none;*/
+}
+
+.serif {
+  color: var(--color-primary);
+  font-family: Lora, Georgia, 'Times New Roman', Times, serif;
 }
 
 * {
