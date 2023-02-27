@@ -18,7 +18,7 @@ const PostContent = styled('div')({
     marginBottom: '1em',
   },
 });
-const serifFontFamily = '"Lora", "Times New Roman", sans-serif';
+const serifFontFamily = 'Lora, Georgia, "Times New Roman", Times, serif';
 
 export default function Post({ post }) {
   return (
