@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Bold } from './shared';
-import { useBlogPost } from '../hooks/useBlogPost';
 
 // Based off colors from globals.css
 const lightGradient = `
@@ -30,7 +29,6 @@ const Anchor = styled('a')({
 
 export default function Header() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const isBlogPost = useBlogPost();
 
   return (
     // TODO Jun 12: Can DRY these styles with other pages
@@ -51,7 +49,8 @@ export default function Header() {
           margin: '0 auto',
           width: '100%',
           // Must match maxWidth on <Container> in <Layout> minus padding
-          maxWidth: isBlogPost ? '852px' : '552px',
+          // maxWidth: isBlogPost ? '852px' : '552px',
+          maxWidth: '852px',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',

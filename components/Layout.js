@@ -5,11 +5,9 @@ import Container from '@mui/material/Container';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Header from './Header';
-import { useBlogPost } from '../hooks/useBlogPost';
 
 export default function Layout(props) {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const isBlogPost = useBlogPost();
 
   const theme = useMemo(
     () =>
@@ -46,7 +44,7 @@ export default function Layout(props) {
       </Head>
 
       <ThemeProvider theme={theme}>
-        <Container maxWidth={isBlogPost ? 'md' : 'sm'} sx={{
+        <Container maxWidth="md" sx={{
           paddingTop: '160px',
         }}>
           <Header />
