@@ -1,40 +1,62 @@
 import Link from 'next/link';
 import Box from '@mui/material/Box';
-import { Bold, Block, KeepTogether } from './shared';
+import Button from '@mui/material/Button';
+import { Block, KeepTogether } from './shared';
 
 export default function Hero() {
   return (
-    <Box component="section">
-      <Box component="h3" sx={{
-        fontWeight: 300,
-        fontSize: '1.75rem',
-        marginTop: 0,
-      }}>
-        Hi, I&apos;m <Bold><KeepTogether>Andy Yoon</KeepTogether></Bold>
-      </Box>
-      <Box component="h1" sx={{
-        fontWeight: 350,
-        fontSize: '2rem',
-      }}>
-        <Block sx={{ marginBottom: '0.25em' }}>Frontend Developer &amp; Musician</Block>
-        <Block>based in&nbsp;<KeepTogether>Los Angeles</KeepTogether></Block>
+    <Box component="section" sx={{
+      textAlign: 'center',
+    }}>
+      <Box
+        component="h1"
+        className="serif"
+        sx={{
+          fontWeight: 'normal',
+          marginBottom: '2rem',
+          fontSize: {
+            xs: '1.75rem',
+            sm: '2rem',
+            md: '2.25rem',
+          },
+        }}
+      >
+        <Box component="span" sx={{ display: { xs: 'block', sm: 'inline-block' } }}>
+          Calm &amp; Compassionate
+        </Box>
+        <Box component="span" sx={{ display: { xs: 'none', sm: 'inline-block' } }}>
+          &nbsp;
+        </Box>
+        <KeepTogether>Frontend Engineer</KeepTogether>
       </Box>
 
-      {/*TODO Jun 12: Mission statement or tagline*/}
       <Box component="h2" sx={{
-        fontWeight: 300,
-        fontSize: '1.25rem',
-        fontStyle: 'italic',
-        marginTop: '3rem',
+        fontSize: {
+          xs: '1rem',
+          sm: '1.25rem',
+        },
+        fontWeight: 'normal',
+        margin: '0 auto',
+        marginBottom: '3rem',
+        maxWidth: '500px',
+        padding: '0 1em',
+        textAlign: 'left',
       }}>
-        <Block>🌱 This site is still growing.</Block>
+        <Block sx={{ marginBottom: '1em' }}>
+          Hi, I&apos;m Andy. I have over 7 years of experience leading teams,
+          proactively solving problems, and creating responsive apps.
+        </Block>
         <Block>
-          For now, please&nbsp;
-          <KeepTogether>
-            <Link href="/blog"><a>check out my blog! →</a></Link>
-          </KeepTogether>
+          With my high-quality approach and keen eye for detail, I&apos;m ready
+          to help your team improve processes and amplify your global impact.
         </Block>
       </Box>
+
+      <a href="mailto:insoo.yoon@proton.me">
+        <Button variant="contained" size="large" sx={{
+          textTransform: 'none',
+        }}>Contact Me</Button>
+      </a>
     </Box>
   );
 }
