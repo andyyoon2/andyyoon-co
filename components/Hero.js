@@ -53,9 +53,7 @@ export default function Hero() {
       </Box>
 
       <a href="mailto:insoo.yoon@proton.me">
-        <Button variant="contained" size="large" sx={{
-          textTransform: 'none',
-        }}>Contact Me</Button>
+        <Button variant="contained" size="large">Contact Me</Button>
       </a>
     </Box>
   );

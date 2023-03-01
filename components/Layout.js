@@ -31,6 +31,15 @@ export default function Layout(props) {
             '"Segoe UI Symbol"',
           ].join(','),
         },
+        components: {
+          MuiButton: {
+            styleOverrides: {
+              root: {
+                textTransform: 'none',
+              },
+            },
+          },
+        },
       }),
     [], // [prefersDarkMode],
   );

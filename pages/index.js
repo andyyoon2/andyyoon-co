@@ -5,7 +5,7 @@ import Work from '../components/Work';
 export default function Home() {
   return (
     // Offset for global padding in <Layout> (see _app.js)
-    <Box sx={{ marginTop: '-40px' }}>
+    <Box sx={{ marginTop: '-20px' }}>
       <Hero />
       <Work />
     </Box>
