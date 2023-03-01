@@ -1,8 +1,9 @@
 import Box from '@mui/material/Box';
 
-export const Bold = ({ children }) => (
+export const Bold = ({ children, sx }) => (
   <Box component="strong" sx={{
     fontWeight: 600,
+    ...sx
   }}>{children}</Box>
 );
 
