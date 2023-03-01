@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import { Bold } from './shared';
 
 const workData = [
@@ -118,12 +119,23 @@ export default function Work() {
             sm: '1.5rem',
           },
           fontWeight: 'normal',
-          textAlign: 'center'
+          marginBottom: '1em',
+          textAlign: 'center',
         }}
       >
         Experience
       </Box>
       <WorkTimeline />
+      <Box sx={{ marginTop: '1rem', textAlign: 'center' }}>
+        {/* <Box component="h3" sx={{
+          fontSize: {
+            xs: '1rem',
+            sm: '1.25rem',
+          },
+          fontWeight: 600,
+        }}>See More Details</Box> */}
+        <Button variant="outlined">Download Resume</Button>
+      </Box>
     </Box>
   );
 }
