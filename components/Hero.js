@@ -36,19 +36,23 @@ export default function Hero() {
           sm: '1.25rem',
         },
         fontWeight: 'normal',
-        margin: '0 auto',
+        // margin: '0 auto',
         marginBottom: '3rem',
-        maxWidth: '500px',
+        // maxWidth: '500px',
         padding: '0 1em',
-        textAlign: 'left',
+        textAlign: 'center',
       }}>
-        <Block sx={{ marginBottom: '1em' }}>
+        {/* <Block sx={{ marginBottom: '1em' }}>
           Hi, I&apos;m Andy. I have over 7 years of experience leading teams,
           proactively solving problems, and creating responsive apps.
         </Block>
         <Block>
           With my high-quality approach and keen eye for detail, I&apos;m ready
           to help your team improve processes and amplify your global impact.
+        </Block> */}
+
+        <Block>
+          with a high-quality approach and keen eye for detail
         </Block>
       </Box>
 
