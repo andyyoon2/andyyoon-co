@@ -44,7 +44,7 @@ const workData = [
   },
 ];
 
-const WorkLine = ({ title, company, url, location, date }) => (
+const WorkDetails = ({ title, company, url, location, date }) => (
   <Box>
     <Box component="p" sx={{
       marginTop: 0,
@@ -59,6 +59,50 @@ const WorkLine = ({ title, company, url, location, date }) => (
       }}>{location}</Box>
     </Box>
     {/* <Box component="p" sx={{ fontSize: '0.875rem' }}>{date}</Box> */}
+  </Box>
+);
+
+const WorkTimeline = () => (
+  <Box sx={{
+    display: 'grid',
+    gridTemplateColumns: '1fr 2rem 4fr',
+    gridTemplateRows: `1.5fr repeat(${workData.length-1}, 1fr)`,
+    // TODO 2023-02-28: Test this with different font sizes
+    maxWidth: '18.75rem',
+    margin: '0 auto',
+  }}>
+    {workData.map(({key, endDate, startDate, ...rest}) => (
+      <Fragment key={key}>
+        <Box sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          textAlign: 'right',
+          paddingBottom: '0.75em',
+        }}>
+          <Box>{endDate}</Box>
+          {startDate &&
+            // Create array of values between dates to show years between
+            Array.from(
+              {length: endDate-startDate-1 },
+              (_, i) => (endDate-i-1)
+            ).map(date => (
+              <Box key={date} sx={[
+                { color: 'var(--color-light-gray-text)', fontSize: '0.875rem' },
+                // TODO, 2023-02-28: Improve naive vertical spacing,
+                // relies on WorkDetails content to be vertically centered
+                key !== 'ea' ? { transform: 'translateY(-67%)' } : null
+              ]}>{date}</Box>
+            ))
+          }
+        </Box>
+        <Box sx={{
+          textAlign: 'center',
+          transform: 'translateY(-1px)',
+        }}>‣</Box>
+        <WorkDetails {...rest} />
+      </Fragment>
+    ))}
   </Box>
 );
 
@@ -79,47 +123,7 @@ export default function Work() {
       >
         Experience
       </Box>
-      <Box sx={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 2rem 4fr',
-        gridTemplateRows: `1.5fr repeat(${workData.length-1}, 1fr)`,
-        // TODO 2023-02-28: Test this with different font sizes
-        maxWidth: '18.75rem',
-        margin: '0 auto',
-      }}>
-        {workData.map(({key, endDate, startDate, ...rest}) => (
-          <Fragment key={key}>
-            <Box sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              textAlign: 'right',
-              paddingBottom: '0.75em',
-            }}>
-              <Box>{endDate}</Box>
-              {startDate &&
-                // Create array of values between dates to show years between
-                Array.from(
-                  {length: endDate-startDate-1 },
-                  (_, i) => (endDate-i-1)
-                ).map(date => (
-                  <Box key={date} sx={[
-                    { color: 'var(--color-light-gray-text)', fontSize: '0.875rem' },
-                    // TODO, 2023-02-28: Improve naive vertical spacing,
-                    // relies on WorkLine content to be vertically centered
-                    key !== 'ea' ? { transform: 'translateY(-67%)' } : null
-                  ]}>{date}</Box>
-                ))
-              }
-            </Box>
-            <Box sx={{
-              textAlign: 'center',
-              transform: 'translateY(-1px)',
-            }}>‣</Box>
-            <WorkLine {...rest} />
-          </Fragment>
-        ))}
-      </Box>
+      <WorkTimeline />
     </Box>
   );
 }
