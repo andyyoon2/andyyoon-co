@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
 import Box from '@mui/material/Box';
 import { Bold } from './shared';
-import Timeline from './work/Timeline';
 
 const workData = [
   {
@@ -63,21 +62,17 @@ const WorkLine = ({ title, company, url, location, date }) => (
   </Box>
 );
 
-const Divider = () => (
-  <Box sx={{
-    height: '100%',
-    width: '1px',
-  }}></Box>
-);
-
 export default function Work() {
   return (
     <Box component="section">
       <Box
-        component="h3"
+        component="h2"
         className="serif"
         sx={{
-          fontSize: '1.25rem',
+          fontSize: {
+            xs: '1.25rem',
+            sm: '1.5rem',
+          },
           fontWeight: 'normal',
           textAlign: 'center'
         }}
@@ -88,6 +83,9 @@ export default function Work() {
         display: 'grid',
         gridTemplateColumns: '1fr 2rem 4fr',
         gridTemplateRows: `1.5fr repeat(${workData.length-1}, 1fr)`,
+        // TODO 2023-02-28: Test this with different font sizes
+        maxWidth: '18.75rem',
+        margin: '0 auto',
       }}>
         {workData.map(({key, endDate, startDate, ...rest}) => (
           <Fragment key={key}>
@@ -106,7 +104,7 @@ export default function Work() {
                   (_, i) => (endDate-i-1)
                 ).map(date => (
                   <Box key={date} sx={[
-                    { color: 'gray', fontSize: '0.875rem' },
+                    { color: 'var(--color-light-gray-text)', fontSize: '0.875rem' },
                     // TODO, 2023-02-28: Improve naive vertical spacing,
                     // relies on WorkLine content to be vertically centered
                     key !== 'ea' ? { transform: 'translateY(-67%)' } : null
