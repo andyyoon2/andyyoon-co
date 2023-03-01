@@ -10,7 +10,8 @@ const workData = [
     company: 'EnterpriseAlumni',
     location: 'Los Angeles, CA',
     url: 'https://enterprisealumni.com/',
-    date: 'Sep 2019 - Sep 2023',
+    endDate: 2023,
+    startDate: 2019,
     // image: 'ea-portal-home.png',
   },
   {
@@ -20,6 +21,8 @@ const workData = [
     location: 'Irvine, CA',
     url: 'https://www.autoeveramerica.com/',
     date: 'Nov 2017 - Sep 2019',
+    endDate: 2019,
+    startDate: 2017,
     // image: 'kia-home.png',
   },
   {
@@ -29,6 +32,8 @@ const workData = [
     location: 'Irvine, CA',
     url: 'https://compositeapps.net/',
     date: 'Oct 2015 - Oct 2017',
+    endDate: 2017,
+    startDate: 2015,
   },
   {
     key: 'ucla',
@@ -36,6 +41,7 @@ const workData = [
     company: 'UCLA',
     location: 'Los Angeles, CA',
     date: '2010-2015',
+    endDate: 2015,
   },
 ];
 
@@ -43,13 +49,14 @@ const WorkLine = ({ title, company, url, location, date }) => (
   <Box>
     <Box component="p" sx={{
       marginTop: 0,
-      marginBottom: '0.5em',
+      marginBottom: '1em',
     }}>
       <Bold sx={{ display: 'block' }}>{title}</Bold>
       <Box component="a" href={url} target="_blank">{company}</Box>
       <Box sx={{
         display: 'block',
         fontSize: '0.875rem',
+        marginTop: '0.325em',
       }}>{location}</Box>
     </Box>
     {/* <Box component="p" sx={{ fontSize: '0.875rem' }}>{date}</Box> */}
@@ -80,13 +87,33 @@ export default function Work() {
       <Box sx={{
         display: 'grid',
         gridTemplateColumns: '1fr 2rem 4fr',
-        gridTemplateRows: `repeat(${workData.length}, 1fr)`,
+        gridTemplateRows: `1.5fr repeat(${workData.length-1}, 1fr)`,
       }}>
-        {/* <Timeline /> */}
-        {/* <Divider /> */}
-        {workData.map(({key, date, ...rest}) => (
+        {workData.map(({key, endDate, startDate, ...rest}) => (
           <Fragment key={key}>
-            <Box sx={{ textAlign: 'right' }}>{date.substring(date.length-4, date.length)}</Box> {/* TODO: clean up date stuff */}
+            <Box sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              textAlign: 'right',
+              paddingBottom: '0.75em',
+            }}>
+              <Box>{endDate}</Box>
+              {startDate &&
+                // Create array of values between dates to show years between
+                Array.from(
+                  {length: endDate-startDate-1 },
+                  (_, i) => (endDate-i-1)
+                ).map(date => (
+                  <Box key={date} sx={[
+                    { color: 'gray', fontSize: '0.875rem' },
+                    // TODO, 2023-02-28: Improve naive vertical spacing,
+                    // relies on WorkLine content to be vertically centered
+                    key !== 'ea' ? { transform: 'translateY(-67%)' } : null
+                  ]}>{date}</Box>
+                ))
+              }
+            </Box>
             <Box sx={{
               textAlign: 'center',
               transform: 'translateY(-1px)',
