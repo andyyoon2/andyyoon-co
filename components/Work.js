@@ -1,5 +1,7 @@
+import { Fragment } from 'react';
 import Box from '@mui/material/Box';
 import { Bold } from './shared';
+import Timeline from './work/Timeline';
 
 const workData = [
   {
@@ -45,13 +47,20 @@ const WorkLine = ({ title, company, url, location, date }) => (
     }}>
       <Bold sx={{ display: 'block' }}>{title}</Bold>
       <Box component="a" href={url} target="_blank">{company}</Box>
-      <Box component="em" sx={{
+      <Box sx={{
         display: 'block',
         fontSize: '0.875rem',
       }}>{location}</Box>
     </Box>
-    <Box component="p" sx={{ fontSize: '0.875rem' }}>{date}</Box>
+    {/* <Box component="p" sx={{ fontSize: '0.875rem' }}>{date}</Box> */}
   </Box>
+);
+
+const Divider = () => (
+  <Box sx={{
+    height: '100%',
+    width: '1px',
+  }}></Box>
 );
 
 export default function Work() {
@@ -69,15 +78,22 @@ export default function Work() {
         Experience
       </Box>
       <Box sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'stretch'
+        display: 'grid',
+        gridTemplateColumns: '1fr 2rem 4fr',
+        gridTemplateRows: `repeat(${workData.length}, 1fr)`,
       }}>
-        <Box>
-          {workData.map(({key, ...rest}) => (
-            <WorkLine key={key} {...rest} />
-          ))}
-        </Box>
+        {/* <Timeline /> */}
+        {/* <Divider /> */}
+        {workData.map(({key, date, ...rest}) => (
+          <Fragment key={key}>
+            <Box sx={{ textAlign: 'right' }}>{date.substring(date.length-4, date.length)}</Box> {/* TODO: clean up date stuff */}
+            <Box sx={{
+              textAlign: 'center',
+              transform: 'translateY(-1px)',
+            }}>‣</Box>
+            <WorkLine {...rest} />
+          </Fragment>
+        ))}
       </Box>
     </Box>
   );
