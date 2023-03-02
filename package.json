@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "standard --env jest && jest"
   },
   "dependencies": {
     "@emotion/react": "^11.8.2",
@@ -29,6 +29,7 @@
     "babel-jest": "^29.4.3",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "standard": "^17.0.0"
   }
 }

@@ -1,6 +1,6 @@
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import { Bold, KeepTogether } from './shared';
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import { KeepTogether } from './shared'
 
 const workData = [
   {
@@ -11,7 +11,7 @@ const workData = [
     url: 'https://enterprisealumni.com/',
     date: 'Sep 2019 – Feb 2023',
     endDate: 2023,
-    startDate: 2019,
+    startDate: 2019
     // image: 'ea-portal-home.png',
   },
   {
@@ -22,7 +22,7 @@ const workData = [
     url: 'https://www.autoeveramerica.com/',
     date: 'Nov 2017 – Sep 2019',
     endDate: 2019,
-    startDate: 2017,
+    startDate: 2017
     // image: 'kia-home.png',
   },
   {
@@ -33,8 +33,8 @@ const workData = [
     url: 'https://compositeapps.net/',
     date: 'Oct 2015 – Oct 2017',
     endDate: 2017,
-    startDate: 2015,
-  },
+    startDate: 2015
+  }
   // {
   //   key: 'ucla',
   //   title: 'B.S. Computer Science',
@@ -43,62 +43,70 @@ const workData = [
   //   date: '2010 – 2015',
   //   endDate: 2015,
   // },
-];
+]
 
 const responsiveH2Sizes = {
   xs: '1.25rem',
   sm: '1.375rem',
-  md: '1.75rem',
-};
+  md: '1.75rem'
+}
 const responsiveH3Sizes = {
   xs: '1.125rem',
   sm: '1.25rem',
-  md: '1.5rem',
-};
+  md: '1.5rem'
+}
 const responsiveTextSizes = {
   xs: '1rem',
   sm: '1.125rem',
-  md: '1.25rem',
-};
+  md: '1.25rem'
+}
 const responsiveTextSizesSm = {
   xs: '0.875rem',
   sm: '1rem',
-  md: '1.125rem',
-};
+  md: '1.125rem'
+}
 
 const WorkDetails = ({ title, company, url, location, date }) => (
   <Box>
     <Box sx={{ marginBottom: '2rem' }}>
-      <Box component="h3" sx={{
-        display: 'block',
-        fontSize: responsiveH3Sizes,
-        fontWeight: 600,
-        marginTop: 0,
-        marginBottom: '0.175em',
-      }}>{title}</Box>
-      <Box component="a" href={url} target="_blank" sx={{
-        display: 'block',
-        fontSize: responsiveTextSizes,
-        marginBottom: '0.5em',
-      }}>{company}</Box>
+      <Box
+        component='h3' sx={{
+          display: 'block',
+          fontSize: responsiveH3Sizes,
+          fontWeight: 600,
+          marginTop: 0,
+          marginBottom: '0.175em'
+        }}
+      >{title}
+      </Box>
+      <Box
+        component='a' href={url} target='_blank' sx={{
+          display: 'block',
+          fontSize: responsiveTextSizes,
+          marginBottom: '0.5em'
+        }}
+      >{company}
+      </Box>
       <Box sx={{
         display: 'block',
         fontSize: responsiveTextSizesSm,
-        marginBottom: '0.25em',
-      }}>{date}</Box>
+        marginBottom: '0.25em'
+      }}
+      >{date}
+      </Box>
       <Box sx={{ fontSize: responsiveTextSizesSm }}>{location}</Box>
     </Box>
   </Box>
-);
+)
 
-export default function Work() {
+export default function Work () {
   return (
-    <Box component="section">
+    <Box component='section'>
       <Box sx={{
         display: 'grid',
         gridTemplateColumns: {
           xs: '1fr',
-          sm: '1fr 1fr',
+          sm: '1fr 1fr'
         },
         gridTemplateRows: 'repeat(6, 1fr)',
         gridTemplateAreas: {
@@ -117,42 +125,45 @@ export default function Work() {
             'cta work'
             '. work'
             '. work'
-          `,
+          `
         },
         columnGap: { xs: null, sm: '3rem', md: '4rem' },
-        textAlign: { xs: 'center', sm: 'left' },
-      }}>
+        textAlign: { xs: 'center', sm: 'left' }
+      }}
+      >
         <Box
-          component="h2"
+          component='h2'
           sx={{
             fontSize: responsiveH2Sizes,
             fontWeight: 600,
             gridArea: 'heading',
             marginTop: 0,
             marginBottom: '1em',
-            textAlign: { xs: null, sm: 'right' },
+            textAlign: { xs: null, sm: 'right' }
           }}
         >
-          <Box component="span" sx={{ color: 'var(--color-primary)' }}>7+ years of experience </Box>
+          <Box component='span' sx={{ color: 'var(--color-primary)' }}>7+ years of experience </Box>
           leading teams, solving problems, and creating <KeepTogether>responsive apps</KeepTogether>
         </Box>
 
         <Box sx={{
           gridArea: 'cta',
-          textAlign: { xs: null, sm: 'right' },
-        }}>
-          <a href="/Andy-Yoon-resume.pdf" target="_blank">
-            <Button variant="outlined" size="large">View Resume</Button>
+          textAlign: { xs: null, sm: 'right' }
+        }}
+        >
+          <a href='/Andy-Yoon-resume.pdf' target='_blank'>
+            <Button variant='outlined' size='large'>View Resume</Button>
           </a>
         </Box>
 
         <Box sx={{
           gridArea: 'work',
-          paddingTop: '1px', // Slight offset for different font-sizes
-        }}>
-          {workData.map(({key, ...rest}) => <WorkDetails key={key} {...rest} />)}
+          paddingTop: '1px' // Slight offset for different font-sizes
+        }}
+        >
+          {workData.map(({ key, ...rest }) => <WorkDetails key={key} {...rest} />)}
         </Box>
       </Box>
     </Box>
-  );
+  )
 }
