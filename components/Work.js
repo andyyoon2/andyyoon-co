@@ -141,7 +141,9 @@ export default function Work() {
           gridArea: 'cta',
           textAlign: { xs: null, sm: 'right' },
         }}>
-          <Button variant="outlined" size="large">Download Resume</Button>
+          <a href="/Andy-Yoon-resume.pdf" target="_blank">
+            <Button variant="outlined" size="large">View Resume</Button>
+          </a>
         </Box>
 
         <Box sx={{
