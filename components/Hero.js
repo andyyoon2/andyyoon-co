@@ -1,13 +1,12 @@
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import { KeepTogether } from './shared'
+import { KeepTogether } from './shared/components'
 
 export default function Hero () {
   return (
     <Box
-      component='section' sx={{
-        textAlign: 'center'
-      }}
+      component='section'
+      sx={{ textAlign: 'center' }}
     >
       <Box
         component='h1'
@@ -16,10 +15,11 @@ export default function Hero () {
           fontWeight: 'normal',
           marginBottom: '0.5em',
           fontSize: {
-            xs: '1.75rem',
-            sm: '2rem',
+            xs: '2rem',
+            sm: '2.25rem',
             md: '2.625rem'
-          }
+          },
+          letterSpacing: '-0.022em'
         }}
       >
         <Box component='span' sx={{ display: { xs: 'block', sm: 'inline-block' } }}>
@@ -33,33 +33,42 @@ export default function Hero () {
 
       <Box
         component='h2' sx={{
+          fontWeight: 'normal',
           fontSize: {
-            xs: '1rem',
-            sm: '1.25rem',
+            xs: '1.25rem',
+            sm: '1.5rem',
             md: '1.75rem'
           },
-          fontWeight: 'normal',
-          // margin: '0 auto',
+          letterSpacing: {
+            xs: '-0.017em',
+            sm: '-0.019em',
+            md: '-0.021em'
+          },
           marginTop: 0,
           marginBottom: '3rem',
-          // maxWidth: '500px',
           padding: '0 1em',
           textAlign: 'center'
         }}
       >
-        {/* <Block sx={{ marginBottom: '1em' }}>
-          Hi, I&apos;m Andy. I have over 7 years of experience leading teams,
-          proactively solving problems, and creating responsive apps.
-        </Block>
-        <Block>
-          With my high-quality approach and keen eye for detail, I&apos;m ready
-          to help your team improve processes and amplify your global impact.
-        </Block> */}
-        With a high-quality approach and keen eye for detail
+        With a high-quality approach &amp; <KeepTogether>keen eye for detail</KeepTogether>
       </Box>
 
       <a href='mailto:insoo.yoon@proton.me'>
-        <Button variant='contained' size='large'>Contact Me</Button>
+        <Button
+          variant='contained'
+          size='large'
+          sx={{
+            fontSize: {
+              xs: '1rem',
+              md: '1.125rem'
+            },
+            letterSpacing: {
+              xs: '-0.011em',
+              md: '-0.014em'
+            }
+          }}
+        >Contact Me
+        </Button>
       </a>
     </Box>
   )

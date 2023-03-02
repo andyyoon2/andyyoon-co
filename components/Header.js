@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Box from '@mui/material/Box'
 import { styled } from '@mui/system'
 // import useMediaQuery from '@mui/material/useMediaQuery';
-import { Bold } from './shared'
+import { Bold } from './shared/components'
 
 // Based off colors from globals.css
 const lightGradient = `
