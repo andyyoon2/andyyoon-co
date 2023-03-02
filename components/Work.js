@@ -83,41 +83,51 @@ export default function Work() {
   return (
     <Box component="section">
       <Box sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'flex-start',
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gridTemplateRows: 'repeat(6, 1fr)',
+        gridTemplateAreas: `
+          'heading work'
+          'heading work'
+          'heading work'
+          'cta work'
+          '. work'
+          '. work'
+        `,
+        columnGap: '4rem',
       }}>
-        <Box sx={{ flex: '0 0 50%' }}>
-          <Box
-            component="h2"
-            sx={{
-              fontSize: {
-                xs: '1.25rem',
-                sm: '1.5rem',
-                md: '1.75rem',
-              },
-              fontWeight: 600,
-              paddingRight: '2rem',
-              marginTop: 0,
-              marginBottom: '1em',
-              textAlign: 'right',
-            }}
-          >
-            7+ years of experience leading teams, solving problems, and creating responsive apps
-          </Box>
+        <Box
+          component="h2"
+          sx={{
+            fontSize: {
+              xs: '1.25rem',
+              sm: '1.5rem',
+              md: '1.75rem',
+            },
+            fontWeight: 600,
+            gridArea: 'heading',
+            marginTop: 0,
+            marginBottom: '1em',
+            textAlign: 'right',
+          }}
+        >
+          <Box component="span" sx={{ color: 'var(--color-primary)' }}>7+ years of experience </Box>
+          leading teams, solving problems, and creating responsive apps
         </Box>
 
         <Box sx={{
-          flex: '0 0 50%',
+          gridArea: 'cta',
+          textAlign: 'right',
+        }}>
+          <Button variant="outlined" size="large">Download Resume</Button>
+        </Box>
+
+        <Box sx={{
+          gridArea: 'work',
           paddingTop: '0.25rem',
-          paddingLeft: '2rem',
         }}>
           {workData.map(({key, ...rest}) => <WorkDetails key={key} {...rest} />)}
         </Box>
-      </Box>
-
-      <Box sx={{ marginTop: '1rem', textAlign: 'center' }}>
-        <Button variant="outlined">Download Resume</Button>
       </Box>
     </Box>
   );
