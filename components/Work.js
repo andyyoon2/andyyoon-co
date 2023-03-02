@@ -45,25 +45,53 @@ const workData = [
   // },
 ]
 
-const responsiveH2Sizes = {
-  xs: '1.25rem',
-  sm: '1.375rem',
-  md: '1.75rem'
+const responsiveTextH2 = {
+  fontSize: {
+    xs: '1.25rem',
+    sm: '1.375rem',
+    md: '1.75rem'
+  },
+  letterSpacing: {
+    xs: '-0.017em',
+    sm: '-0.018em',
+    md: '-0.021em'
+  }
 }
-const responsiveH3Sizes = {
-  xs: '1.125rem',
-  sm: '1.25rem',
-  md: '1.5rem'
+const responsiveTextH3 = {
+  fontSize: {
+    xs: '1.125rem',
+    sm: '1.25rem',
+    md: '1.5rem'
+  },
+  letterSpacing: {
+    xs: '-0.014em',
+    sm: '-0.017em',
+    md: '-0.019em'
+  }
 }
-const responsiveTextSizes = {
-  xs: '1rem',
-  sm: '1.125rem',
-  md: '1.25rem'
+const responsiveTextRegular = {
+  fontSize: {
+    xs: '1rem',
+    sm: '1.125rem',
+    md: '1.25rem'
+  },
+  letterSpacing: {
+    xs: '-0.011em',
+    sm: '-0.014em',
+    md: '-0.017em'
+  }
 }
-const responsiveTextSizesSm = {
-  xs: '0.875rem',
-  sm: '1rem',
-  md: '1.125rem'
+const responsiveTextSmall = {
+  fontSize: {
+    xs: '0.875rem',
+    sm: '1rem',
+    md: '1.125rem'
+  },
+  letterSpacing: {
+    xs: '-0.006em',
+    sm: '-0.011em',
+    md: '-0.014em'
+  }
 }
 
 const WorkDetails = ({ title, company, url, location, date }) => (
@@ -71,8 +99,8 @@ const WorkDetails = ({ title, company, url, location, date }) => (
     <Box sx={{ marginBottom: '2rem' }}>
       <Box
         component='h3' sx={{
+          ...responsiveTextH3,
           display: 'block',
-          fontSize: responsiveH3Sizes,
           fontWeight: 600,
           marginTop: 0,
           marginBottom: '0.175em'
@@ -81,20 +109,20 @@ const WorkDetails = ({ title, company, url, location, date }) => (
       </Box>
       <Box
         component='a' href={url} target='_blank' sx={{
-          display: 'block',
-          fontSize: responsiveTextSizes,
+          ...responsiveTextRegular,
+          display: 'inline-block',
           marginBottom: '0.5em'
         }}
       >{company}
       </Box>
       <Box sx={{
+        ...responsiveTextSmall,
         display: 'block',
-        fontSize: responsiveTextSizesSm,
         marginBottom: '0.25em'
       }}
       >{date}
       </Box>
-      <Box sx={{ fontSize: responsiveTextSizesSm }}>{location}</Box>
+      <Box sx={{ ...responsiveTextSmall }}>{location}</Box>
     </Box>
   </Box>
 )
@@ -134,7 +162,7 @@ export default function Work () {
         <Box
           component='h2'
           sx={{
-            fontSize: responsiveH2Sizes,
+            ...responsiveTextH2,
             fontWeight: 600,
             gridArea: 'heading',
             marginTop: 0,
@@ -152,7 +180,9 @@ export default function Work () {
         }}
         >
           <a href='/Andy-Yoon-resume.pdf' target='_blank'>
-            <Button variant='outlined' size='large'>View Resume</Button>
+            <Button variant='outlined' size='large' sx={{ ...responsiveTextSmall }}>
+              View Resume
+            </Button>
           </a>
         </Box>
 

@@ -15,8 +15,8 @@ export default function Hero () {
           fontWeight: 'normal',
           marginBottom: '0.5em',
           fontSize: {
-            xs: '1.75rem',
-            sm: '2rem',
+            xs: '2rem',
+            sm: '2.25rem',
             md: '2.625rem'
           },
           letterSpacing: '-0.022em'
@@ -35,13 +35,13 @@ export default function Hero () {
         component='h2' sx={{
           fontWeight: 'normal',
           fontSize: {
-            xs: '1rem',
-            sm: '1.25rem',
+            xs: '1.25rem',
+            sm: '1.5rem',
             md: '1.75rem'
           },
           letterSpacing: {
-            xs: '-0.011em',
-            sm: '-0.017em',
+            xs: '-0.017em',
+            sm: '-0.019em',
             md: '-0.021em'
           },
           marginTop: 0,
@@ -54,7 +54,21 @@ export default function Hero () {
       </Box>
 
       <a href='mailto:insoo.yoon@proton.me'>
-        <Button variant='contained' size='large'>Contact Me</Button>
+        <Button
+          variant='contained'
+          size='large'
+          sx={{
+            fontSize: {
+              xs: '1rem',
+              md: '1.125rem'
+            },
+            letterSpacing: {
+              xs: '-0.011em',
+              md: '-0.014em'
+            }
+          }}
+        >Contact Me
+        </Button>
       </a>
     </Box>
   )
