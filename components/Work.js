@@ -68,10 +68,7 @@ const responsiveTextSizesSm = {
 
 const WorkDetails = ({ title, company, url, location, date }) => (
   <Box>
-    <Box component="p" sx={{
-      marginTop: 0,
-      marginBottom: '2rem',
-    }}>
+    <Box sx={{ marginBottom: '2rem' }}>
       <Box component="h3" sx={{
         display: 'block',
         fontSize: responsiveH3Sizes,
