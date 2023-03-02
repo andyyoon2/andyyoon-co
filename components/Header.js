@@ -10,7 +10,7 @@ const lightGradient = `
     hsla(var(--primary-hue), 10%, 95%, 1) 25%,
     hsla(var(--primary-hue), 10%, 95%, 0.85) 60%,
     hsla(var(--primary-hue), 10%, 95%, 0.4) 80%,
-    hsla(var(--primary-hue), 10%, 95%, 0.1)
+    hsla(var(--primary-hue), 10%, 95%, 0)
   )
 `;
 // const darkGradient = `
@@ -44,6 +44,7 @@ export default function Header() {
         paddingLeft: { xs: '16px', sm: '24px' }, // left-right padding matches <Blog>
         paddingRight: { xs: '16px', sm: '24px' },
         textAlign: 'center',
+        zIndex: 1,
       }}>
         <Box sx={{
           margin: '0 auto',
@@ -55,7 +56,7 @@ export default function Header() {
           justifyContent: 'space-between',
           alignItems: 'center',
         }}>
-          <Link href="/" passHref><Anchor><Bold>andyyoon.co</Bold></Anchor></Link>
+          <Link href="/" passHref><Anchor><Bold>andyyoon</Bold></Anchor></Link>
           <nav>
             <Link href="/blog" passHref><Anchor>blog</Anchor></Link>
           </nav>

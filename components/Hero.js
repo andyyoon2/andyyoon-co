@@ -13,11 +13,11 @@ export default function Hero() {
         className="serif"
         sx={{
           fontWeight: 'normal',
-          marginBottom: '2rem',
+          marginBottom: '0.5em',
           fontSize: {
             xs: '1.75rem',
             sm: '2rem',
-            md: '2.25rem',
+            md: '2.625rem',
           },
         }}
       >
@@ -34,22 +34,25 @@ export default function Hero() {
         fontSize: {
           xs: '1rem',
           sm: '1.25rem',
+          md: '1.75rem',
         },
         fontWeight: 'normal',
-        margin: '0 auto',
+        // margin: '0 auto',
+        marginTop: 0,
         marginBottom: '3rem',
-        maxWidth: '500px',
+        // maxWidth: '500px',
         padding: '0 1em',
-        textAlign: 'left',
+        textAlign: 'center',
       }}>
-        <Block sx={{ marginBottom: '1em' }}>
+        {/* <Block sx={{ marginBottom: '1em' }}>
           Hi, I&apos;m Andy. I have over 7 years of experience leading teams,
           proactively solving problems, and creating responsive apps.
         </Block>
         <Block>
           With my high-quality approach and keen eye for detail, I&apos;m ready
           to help your team improve processes and amplify your global impact.
-        </Block>
+        </Block> */}
+        With a high-quality approach and keen eye for detail
       </Box>
 
       <a href="mailto:insoo.yoon@proton.me">
