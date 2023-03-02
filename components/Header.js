@@ -56,7 +56,7 @@ export default function Header() {
           justifyContent: 'space-between',
           alignItems: 'center',
         }}>
-          <Link href="/" passHref><Anchor><Bold>andyyoon.co</Bold></Anchor></Link>
+          <Link href="/" passHref><Anchor><Bold>andyyoon</Bold></Anchor></Link>
           <nav>
             <Link href="/blog" passHref><Anchor>blog</Anchor></Link>
           </nav>
