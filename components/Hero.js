@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import { KeepTogether } from './shared'
+import { KeepTogether } from './shared/components'
 
 export default function Hero () {
   return (
