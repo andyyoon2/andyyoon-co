@@ -10,10 +10,10 @@ export default function Hero () {
 
   const HeroContent = () => (
     <>
-      <Box component="span" sx={{ display: { xs: 'block', sm: 'inline-block' } }}>
+      <Box component='span' sx={{ display: { xs: 'block', sm: 'inline-block' } }}>
         Calm &amp; Compassionate
       </Box>
-      <Box component="span" sx={{ display: { xs: 'none', sm: 'inline-block' } }}>
+      <Box component='span' sx={{ display: { xs: 'none', sm: 'inline-block' } }}>
         &nbsp;
       </Box>
       <KeepTogether>Frontend Engineer</KeepTogether>
@@ -24,12 +24,11 @@ export default function Hero () {
     <Box
       component='section'
       sx={{ textAlign: 'center' }}
-      onClick={() => {setIsSerif(!isSerif)}}
+      onClick={() => { setIsSerif(!isSerif) }}
     >
       {isSerif
         ? <HeroSerif><HeroContent /></HeroSerif>
-        : <HeroSansSerif><HeroContent /></HeroSansSerif>
-      }
+        : <HeroSansSerif><HeroContent /></HeroSansSerif>}
 
       <Box
         component='h1'
@@ -53,18 +52,20 @@ export default function Hero () {
         <KeepTogether>Frontend Engineer</KeepTogether>
       </Box>
 
-      <Box component="h2" sx={{
-        fontSize: {
-          xs: '1rem',
-          sm: '1.25rem',
-          md: '1.75rem',
-        },
-        fontWeight: 'normal',
-        marginTop: 0,
-        marginBottom: '3rem',
-        padding: '0 1em',
-        textAlign: 'center',
-      }}>
+      <Box
+        component='h2' sx={{
+          fontSize: {
+            xs: '1rem',
+            sm: '1.25rem',
+            md: '1.75rem'
+          },
+          fontWeight: 'normal',
+          marginTop: 0,
+          marginBottom: '3rem',
+          padding: '0 1em',
+          textAlign: 'center'
+        }}
+      >
         With a high-quality approach &amp; <KeepTogether>keen eye for detail</KeepTogether>
       </Box>
 
@@ -75,16 +76,16 @@ export default function Hero () {
   )
 }
 
-function HeroSansSerif({ children }) {
+function HeroSansSerif ({ children }) {
   return (
     <Box
-      component="h1"
+      component='h1'
       sx={{
         color: 'var(--color-primary)',
         fontWeight: 800,
         fontSize: '2rem',
         letterSpacing: '-0.022em',
-        marginBottom: '0.5em',
+        marginBottom: '0.5em'
         // fontSize: {
         //   xs: '1.75rem',
         //   sm: '2rem',
@@ -94,25 +95,25 @@ function HeroSansSerif({ children }) {
     >
       {children}
     </Box>
-  );
+  )
 }
 
-function HeroSerif({ children }) {
+function HeroSerif ({ children }) {
   return (
     <Box
-      component="h1"
-      className="serif"
+      component='h1'
+      className='serif'
       sx={{
         fontWeight: 'normal',
         marginBottom: '0.5em',
         fontSize: {
           xs: '1.75rem',
           sm: '2rem',
-          md: '2.625rem',
-        },
+          md: '2.625rem'
+        }
       }}
     >
       {children}
     </Box>
-  );
+  )
 }
