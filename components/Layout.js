@@ -1,6 +1,5 @@
 import { useMemo } from 'react'
 import Head from 'next/head'
-import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 // import useMediaQuery from '@mui/material/useMediaQuery';

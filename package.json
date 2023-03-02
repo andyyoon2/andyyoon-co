@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "standard && jest"
+    "test": "standard --env jest && jest"
   },
   "dependencies": {
     "@emotion/react": "^11.8.2",

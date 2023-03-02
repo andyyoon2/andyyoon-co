@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import { Bold, KeepTogether } from './shared'
+import { KeepTogether } from './shared'
 
 const workData = [
   {
