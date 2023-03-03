@@ -4,6 +4,7 @@ import Container from '@mui/material/Container'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 // import useMediaQuery from '@mui/material/useMediaQuery';
 import Header from './Header'
+import Footer from './Footer'
 
 export default function Layout (props) {
   // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -61,6 +62,7 @@ export default function Layout (props) {
           <main>
             {props.children}
           </main>
+          <Footer />
         </Container>
       </ThemeProvider>
     </>
