@@ -3,6 +3,7 @@ import Box from '@mui/material/Box'
 import { styled } from '@mui/system'
 // import useMediaQuery from '@mui/material/useMediaQuery';
 import { Bold } from './shared/components'
+import { responsiveTextSmall } from './shared/styles'
 
 // Based off colors from globals.css
 const lightGradient = `
@@ -48,6 +49,7 @@ export default function Header () {
       }}
       >
         <Box sx={{
+          ...responsiveTextSmall,
           margin: '0 auto',
           width: '100%',
           // Must match maxWidth on <Container> in <Layout> minus padding

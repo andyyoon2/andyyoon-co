@@ -136,11 +136,16 @@ export default function Work () {
           textAlign: { xs: null, sm: 'right' }
         }}
         >
-          <a href='/Andy-Yoon-resume.pdf' target='_blank'>
+          <Box
+            component='a'
+            href='/Andy-Yoon-resume.pdf'
+            target='_blank'
+            sx={{ textDecoration: 'none' }}
+          >
             <Button variant='outlined' size='large' sx={{ ...responsiveTextSmall }}>
               View Resume
             </Button>
-          </a>
+          </Box>
         </Box>
 
         <Box sx={{

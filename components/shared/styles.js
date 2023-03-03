@@ -1,12 +1,12 @@
 export const responsiveTextH2 = {
   fontSize: {
-    xs: '1.25rem',
-    sm: '1.375rem',
+    xs: '1.375rem',
+    sm: '1.5rem',
     md: '1.75rem'
   },
   letterSpacing: {
-    xs: '-0.017em',
-    sm: '-0.018em',
+    xs: '-0.018em',
+    sm: '-0.019em',
     md: '-0.021em'
   }
 }
@@ -14,12 +14,12 @@ export const responsiveTextH3 = {
   fontSize: {
     xs: '1.125rem',
     sm: '1.25rem',
-    md: '1.5rem'
+    md: '1.375rem'
   },
   letterSpacing: {
     xs: '-0.014em',
     sm: '-0.017em',
-    md: '-0.019em'
+    md: '-0.018em'
   }
 }
 export const responsiveTextRegular = {

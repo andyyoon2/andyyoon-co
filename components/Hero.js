@@ -53,7 +53,7 @@ export default function Hero () {
         With a high-quality approach &amp; <KeepTogether>keen eye for detail</KeepTogether>
       </Box>
 
-      <a href='mailto:insoo.yoon@proton.me'>
+      <Box component='a' href='mailto:insoo.yoon@proton.me' sx={{ textDecoration: 'none' }}>
         <Button
           variant='contained'
           size='large'
@@ -69,7 +69,7 @@ export default function Hero () {
           }}
         >Contact Me
         </Button>
-      </a>
+      </Box>
     </Box>
   )
 }
