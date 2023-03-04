@@ -86,18 +86,17 @@ const WorkDetails = ({ title, company, url, location, date }) => (
 
 export default function Work () {
   return (
-    <Box component='section'>
+    <Box component='section' sx={{ marginBottom: { xs: 0, sm: '6rem' } }}>
       <Box sx={{
         display: 'grid',
         gridTemplateColumns: {
           xs: '1fr',
           sm: '1fr 1fr'
         },
-        gridTemplateRows: 'repeat(6, 1fr)',
+        gridTemplateRows: 'repeat(5, 1fr)',
         gridTemplateAreas: {
           xs: `
             'heading'
-            'work'
             'work'
             'work'
             'work'
@@ -108,7 +107,6 @@ export default function Work () {
             'heading work'
             'cta work'
             'cta work'
-            '. work'
             '. work'
           `
         },

@@ -16,7 +16,7 @@ export default function Footer () {
         }}
       >
         <Box className='gray-text' sx={{ flex: '1 0 33%', textAlign: 'right' }}>
-          <Signature sx={{ height: '3rem' }} />
+          <Signature sx={{ height: '3rem', opacity: 0.85 }} />
         </Box>
         <Box component='span' sx={{ flex: '0 0 1.5rem' }}>©</Box>
         <Box component='span' sx={{ flex: '1 0 33%', textAlign: 'left' }}>
