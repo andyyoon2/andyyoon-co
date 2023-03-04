@@ -1,40 +1,75 @@
-import Link from 'next/link';
-import Box from '@mui/material/Box';
-import { Bold, Block, KeepTogether } from './shared';
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import { KeepTogether } from './shared/components'
 
-export default function Hero() {
+export default function Hero () {
   return (
-    <Box component="section">
-      <Box component="h3" sx={{
-        fontWeight: 300,
-        fontSize: '1.75rem',
-        marginTop: 0,
-      }}>
-        Hi, I&apos;m <Bold><KeepTogether>Andy Yoon</KeepTogether></Bold>
-      </Box>
-      <Box component="h1" sx={{
-        fontWeight: 350,
-        fontSize: '2rem',
-      }}>
-        <Block sx={{ marginBottom: '0.25em' }}>Frontend Developer &amp; Musician</Block>
-        <Block>based in&nbsp;<KeepTogether>Los Angeles</KeepTogether></Block>
+    <Box
+      component='section'
+      sx={{ textAlign: 'center' }}
+    >
+      <Box
+        component='h1'
+        className='serif'
+        sx={{
+          fontWeight: 'normal',
+          marginBottom: '0.5em',
+          fontSize: {
+            xs: '2rem',
+            sm: '2.25rem',
+            md: '2.625rem'
+          },
+          letterSpacing: '-0.022em'
+        }}
+      >
+        <Box component='span' sx={{ display: { xs: 'block', sm: 'inline-block' } }}>
+          Calm &amp; Compassionate
+        </Box>
+        <Box component='span' sx={{ display: { xs: 'none', sm: 'inline-block' } }}>
+          &nbsp;
+        </Box>
+        <KeepTogether>Frontend Engineer</KeepTogether>
       </Box>
 
-      {/*TODO Jun 12: Mission statement or tagline*/}
-      <Box component="h2" sx={{
-        fontWeight: 300,
-        fontSize: '1.25rem',
-        fontStyle: 'italic',
-        marginTop: '3rem',
-      }}>
-        <Block>🌱 This site is still growing.</Block>
-        <Block>
-          For now, please&nbsp;
-          <KeepTogether>
-            <Link href="/blog"><a>check out my blog! →</a></Link>
-          </KeepTogether>
-        </Block>
+      <Box
+        component='h2' sx={{
+          fontWeight: 'normal',
+          fontSize: {
+            xs: '1.25rem',
+            sm: '1.5rem',
+            md: '1.75rem'
+          },
+          letterSpacing: {
+            xs: '-0.017em',
+            sm: '-0.019em',
+            md: '-0.021em'
+          },
+          marginTop: 0,
+          marginBottom: '3rem',
+          padding: '0 1em',
+          textAlign: 'center'
+        }}
+      >
+        With a high-quality approach &amp; <KeepTogether>keen eye for detail</KeepTogether>
+      </Box>
+
+      <Box component='a' href='mailto:insoo.yoon@proton.me' sx={{ textDecoration: 'none' }}>
+        <Button
+          variant='contained'
+          size='large'
+          sx={{
+            fontSize: {
+              xs: '1rem',
+              md: '1.125rem'
+            },
+            letterSpacing: {
+              xs: '-0.011em',
+              md: '-0.014em'
+            }
+          }}
+        >Contact Me
+        </Button>
       </Box>
     </Box>
-  );
+  )
 }

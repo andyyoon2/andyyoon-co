@@ -1,22 +1,20 @@
-import { useMemo } from 'react';
-import Head from 'next/head';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Header from './Header';
-import { useBlogPost } from '../hooks/useBlogPost';
+import { useMemo } from 'react'
+import Head from 'next/head'
+import Container from '@mui/material/Container'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+// import useMediaQuery from '@mui/material/useMediaQuery';
+import Header from './Header'
+import Footer from './Footer'
 
-export default function Layout(props) {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const isBlogPost = useBlogPost();
+export default function Layout (props) {
+  // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   const theme = useMemo(
     () =>
       createTheme({
-        palette: {
-          mode: prefersDarkMode ? 'dark' : 'light',
-        },
+        // palette: {
+        //   mode: prefersDarkMode ? 'dark' : 'light',
+        // },
         typography: {
           fontFamily: [
             'Inter var',
@@ -30,31 +28,43 @@ export default function Layout(props) {
             'sans-serif',
             '"Apple Color Emoji"',
             '"Segoe UI Emoji"',
-            '"Segoe UI Symbol"',
-          ].join(','),
+            '"Segoe UI Symbol"'
+          ].join(',')
         },
+        components: {
+          MuiButton: {
+            styleOverrides: {
+              root: {
+                textTransform: 'none'
+              }
+            }
+          }
+        }
       }),
-    [prefersDarkMode],
-  );
+    [] // [prefersDarkMode],
+  )
 
   return (
     <>
       <Head>
         <title>Andy Yoon</title>
-        <meta name="description" content="" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <ThemeProvider theme={theme}>
-        <Container maxWidth={isBlogPost ? 'md' : 'sm'} sx={{
-          paddingTop: '160px',
-        }}>
+        <Container
+          maxWidth='md' sx={{
+            paddingTop: '160px'
+          }}
+        >
           <Header />
           <main>
             {props.children}
           </main>
+          <Footer />
         </Container>
       </ThemeProvider>
     </>
-  );
+  )
 }
