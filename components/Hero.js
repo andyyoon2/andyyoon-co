@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import { KeepTogether } from './shared/components'
+import { responsiveTextH1 } from './shared/styles'
 
 export default function Hero () {
   return (
@@ -12,14 +13,9 @@ export default function Hero () {
         component='h1'
         className='serif'
         sx={{
+          ...responsiveTextH1,
           fontWeight: 'normal',
-          marginBottom: '0.5em',
-          fontSize: {
-            xs: '2rem',
-            sm: '2.25rem',
-            md: '2.625rem'
-          },
-          letterSpacing: '-0.022em'
+          marginBottom: '0.5em'
         }}
       >
         <Box component='span' sx={{ display: { xs: 'block', sm: 'inline-block' } }}>
