@@ -1,23 +1,16 @@
 import Link from 'next/link'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { styled } from '@mui/system'
 import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib'
 import { formatDate } from '../../lib/client-side'
+import {
+  responsiveTextH1,
+  responsiveTextH2,
+  responsiveTextH3,
+  responsiveTextRegular,
+  responsiveTextSmall
+} from '../../components/shared/styles'
 
-const PostContent = styled('div')({
-  'p, li': {
-    fontSize: '1.25rem',
-    lineHeight: 1.5
-  },
-  'blockquote:first-of-type': {
-    marginBottom: '3em'
-  },
-  h2: {
-    marginTop: '1.5em',
-    marginBottom: '1em'
-  }
-})
 const serifFontFamily = 'Lora, Georgia, "Times New Roman", Times, serif'
 
 export default function Post ({ post }) {
@@ -30,8 +23,8 @@ export default function Post ({ post }) {
       <Box sx={{ marginBottom: '120px' }}>
         <Typography
           variant='h1' sx={{
+            ...responsiveTextH1,
             fontFamily: serifFontFamily,
-            fontSize: '3rem',
             marginBottom: '0.25em'
           }}
         >
@@ -39,7 +32,7 @@ export default function Post ({ post }) {
         </Typography>
         <Typography
           variant='h2' className='gray-text' sx={{
-            fontSize: '1.125rem',
+            ...responsiveTextRegular,
             fontWeight: 400,
             margin: '0.85em 0'
           }}
@@ -48,15 +41,67 @@ export default function Post ({ post }) {
         </Typography>
         <Typography
           variant='body1' className='gray-text' sx={{
-            fontWeight: 300,
+            ...responsiveTextSmall,
             marginBottom: 0
           }}
         >
           {formatDate(post.date)}
         </Typography>
       </Box>
-      <PostContent
-        sx={{ fontFamily: serifFontFamily, marginBottom: '160px' }}
+      <Box
+        sx={{
+          marginBottom: '160px',
+          'p, li': {
+            ...responsiveTextRegular,
+            lineHeight: 1.5
+          },
+          'blockquote:first-of-type': {
+            marginBottom: '3em'
+          },
+          'h1, h2, h3, h4, h5': {
+            fontFamily: serifFontFamily
+          },
+          h2: {
+            ...responsiveTextH2,
+            marginTop: '1.5em',
+            marginBottom: '1em'
+          },
+          h3: {
+            ...responsiveTextH3
+          },
+          h4: {
+            ...responsiveTextRegular
+          },
+          img: {
+            maxWidth: '100%',
+            margin: '1em auto',
+            '&[src$=\'#two-thirds\']': {
+              display: 'block',
+              width: {
+                md: '67%'
+              }
+            },
+            '&[src$=\'#third\']': {
+              maxWidth: '256px',
+              display: {
+                xs: 'block',
+                md: 'inline-block'
+              },
+              width: {
+                sm: '40%',
+                md: '30%'
+              },
+              marginRight: {
+                md: '3%'
+              },
+              '&:last-child': {
+                marginRight: {
+                  md: 0
+                }
+              }
+            }
+          }
+        }}
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
       {/* TODO: Add some footer here to signify the article is over. Tags? */}

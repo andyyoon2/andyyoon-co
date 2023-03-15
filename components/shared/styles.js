@@ -1,3 +1,11 @@
+export const responsiveTextH1 = {
+  fontSize: {
+    xs: '2rem',
+    sm: '2.25rem',
+    md: '2.625rem'
+  },
+  letterSpacing: '-0.022em'
+}
 export const responsiveTextH2 = {
   fontSize: {
     xs: '1.375rem',
