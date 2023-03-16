@@ -42,7 +42,7 @@ export default function Portfolio () {
               }
             }}
           >
-            <Image src={link.image} alt={link.alt} />
+            <Image src={link.image || ''} alt={link.alt} />
             <Box
               component='span'
               sx={{
