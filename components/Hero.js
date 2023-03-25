@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import { KeepTogether } from './shared/components'
-import { responsiveTextH1 } from './shared/styles'
+import { responsiveTextH1, responsiveTextH2 } from './shared/styles'
 
 export default function Hero () {
   return (
@@ -29,24 +29,15 @@ export default function Hero () {
 
       <Box
         component='h2' sx={{
+          ...responsiveTextH2,
           fontWeight: 'normal',
-          fontSize: {
-            xs: '1.25rem',
-            sm: '1.5rem',
-            md: '1.75rem'
-          },
-          letterSpacing: {
-            xs: '-0.017em',
-            sm: '-0.019em',
-            md: '-0.021em'
-          },
           marginTop: 0,
           marginBottom: '3rem',
           padding: '0 1em',
           textAlign: 'center'
         }}
       >
-        With a high-quality approach &amp; <KeepTogether>keen eye for detail</KeepTogether>
+        Creating positive impact with empathy &amp; purpose
       </Box>
 
       <Box component='a' href='mailto:insoo.yoon@proton.me' sx={{ textDecoration: 'none' }}>
