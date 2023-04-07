@@ -7,7 +7,7 @@ export default function Hero () {
   return (
     <Box
       component='section'
-      sx={{ textAlign: 'center' }}
+      sx={{ textAlign: 'center', marginBottom: '6.5rem' }}
     >
       <Box
         component='h1'
@@ -40,7 +40,7 @@ export default function Hero () {
         Creating positive impact with empathy &amp; purpose
       </Box>
 
-      <Box component='a' href='mailto:insoo.yoon@proton.me' sx={{ textDecoration: 'none' }}>
+      {/*<Box component='a' href='mailto:insoo.yoon@proton.me' sx={{ textDecoration: 'none' }}>
         <Button
           variant='contained'
           size='large'
@@ -56,7 +56,7 @@ export default function Hero () {
           }}
         >Contact Me
         </Button>
-      </Box>
+      </Box>*/}
     </Box>
   )
 }
