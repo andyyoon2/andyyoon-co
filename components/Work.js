@@ -10,26 +10,28 @@ import {
 
 const workData = [
   {
+    key: 'xyla',
+    title: 'Lead Frontend Engineer',
+    company: 'Xyla',
+    location: 'Los Angeles, CA',
+    url: 'https://www.openevidence.com/',
+    date: 'May 2023 – Present'
+  },
+  {
     key: 'ea',
     title: 'Lead Software Engineer',
     company: 'EnterpriseAlumni',
     location: 'Los Angeles, CA',
     url: 'https://enterprisealumni.com/',
-    date: 'Sep 2019 – Feb 2023',
-    endDate: 2023,
-    startDate: 2019
-    // image: 'ea-portal-home.png',
+    date: 'Sep 2019 – Feb 2023'
   },
   {
     key: 'kia',
     title: 'Senior Frontend Developer',
     company: 'Hyundai AutoEver America',
     location: 'Irvine, CA',
-    url: 'https://www.autoeveramerica.com/',
-    date: 'Nov 2017 – Sep 2019',
-    endDate: 2019,
-    startDate: 2017
-    // image: 'kia-home.png',
+    url: 'https://www.hyundai-autoever.com/eng/main/index.do',
+    date: 'Nov 2017 – Sep 2019'
   },
   {
     key: 'compapps',
@@ -37,9 +39,7 @@ const workData = [
     company: 'Composite Apps',
     location: 'Irvine, CA',
     url: 'https://compositeapps.net/',
-    date: 'Oct 2015 – Oct 2017',
-    endDate: 2017,
-    startDate: 2015
+    date: 'Oct 2015 – Oct 2017'
   }
   // {
   //   key: 'ucla',
@@ -93,17 +93,18 @@ export default function Work () {
           xs: '1fr',
           sm: '1fr 1fr'
         },
-        gridTemplateRows: 'repeat(5, 1fr)',
+        gridTemplateRows: { xs: 'repeat(6, 1fr)', sm: 'repeat(4, 1fr)' },
         gridTemplateAreas: {
+          // One `work` row per entry keeps layout clean
           xs: `
             'heading'
+            'work'
             'work'
             'work'
             'work'
             'cta'
           `,
           sm: `
-            'heading work'
             'heading work'
             'cta work'
             'cta work'
@@ -121,11 +122,11 @@ export default function Work () {
             fontWeight: 600,
             gridArea: 'heading',
             marginTop: 0,
-            marginBottom: '1em',
+            marginBottom: '2em',
             textAlign: { xs: null, sm: 'right' }
           }}
         >
-          <Box component='span' sx={{ color: 'var(--color-primary)' }}>7+ years of experience </Box>
+          <Box component='span' sx={{ color: 'var(--color-primary)' }}>8 years of experience </Box>
           leading teams, solving problems, and creating <KeepTogether>responsive apps</KeepTogether>
         </Box>
 
@@ -138,7 +139,7 @@ export default function Work () {
             component='a'
             href='/Andy-Yoon-resume.pdf'
             target='_blank'
-            sx={{ textDecoration: 'none' }}
+            sx={{ textDecoration: 'none', display: 'block', mb: 2 }}
           >
             <Button variant='outlined' size='large' sx={{ ...responsiveTextSmall }}>
               View Resume
