@@ -1,3 +1,5 @@
+'use client'
+
 import { useMemo } from 'react'
 import Container from '@mui/material/Container'
 import { ThemeProvider, createTheme } from '@mui/material/styles'

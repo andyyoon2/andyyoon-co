@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Box from '@mui/material/Box'
-import { styled } from '@mui/system'
 // import useMediaQuery from '@mui/material/useMediaQuery';
 import { Bold } from './shared/components'
 import { responsiveTextSmall } from './shared/styles'
@@ -23,10 +22,10 @@ const lightGradient = `
 //   )
 // `;
 
-const Anchor = styled('a')({
+const linkStyle = {
   cursor: 'pointer',
   '&:hover': { textDecoration: 'underline' }
-})
+}
 
 export default function Header () {
   // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -60,9 +59,9 @@ export default function Header () {
           alignItems: 'center'
         }}
         >
-          <Link href='/' passHref><Anchor><Bold>andyyoon</Bold></Anchor></Link>
+          <Box component={Link} href='/' sx={linkStyle}><Bold>andyyoon</Bold></Box>
           <nav>
-            <Link href='/blog' passHref><Anchor>blog</Anchor></Link>
+            <Box component={Link} href='/blog' sx={linkStyle}>blog</Box>
           </nav>
         </Box>
       </Box>
