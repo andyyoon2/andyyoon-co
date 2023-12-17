@@ -1,7 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { getAllPosts } from '../../lib'
 import { formatDate } from '../../lib/client-side'
 
 const pStyle = { marginTop: 0, marginBottom: '0.75em' }
@@ -108,15 +109,5 @@ function formatPostNumber (number) {
     return number
   } else {
     return '0' + number
-  }
-}
-
-export async function getStaticProps () {
-  const posts = getAllPosts(['slug', 'title', 'description', 'date'])
-
-  return {
-    props: {
-      posts
-    }
   }
 }
