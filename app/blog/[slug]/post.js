@@ -106,7 +106,7 @@ export default function Post ({ post }) {
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
       {/* TODO: Add some footer here to signify the article is over. Tags? */}
-      <Link href='/blog'><a>← See all posts</a></Link>
+      <Link href='/blog'>← See all posts</Link>
     </Box>
   )
 }
