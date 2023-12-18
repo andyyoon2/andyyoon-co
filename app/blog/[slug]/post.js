@@ -1,15 +1,16 @@
+'use client'
+
 import Link from 'next/link'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { getPostBySlug, getAllPosts, markdownToHtml } from '../../lib'
-import { formatDate } from '../../lib/client-side'
+import { formatDate } from '../../../lib/client-side'
 import {
   responsiveTextH1,
   responsiveTextH2,
   responsiveTextH3,
   responsiveTextRegular,
   responsiveTextSmall
-} from '../../components/shared/styles'
+} from '../../../components/shared/styles'
 
 const serifFontFamily = 'Lora, Georgia, "Times New Roman", Times, serif'
 
@@ -105,46 +106,7 @@ export default function Post ({ post }) {
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
       {/* TODO: Add some footer here to signify the article is over. Tags? */}
-      <Link href='/blog'><a>← See all posts</a></Link>
+      <Link href='/blog'>← See all posts</Link>
     </Box>
   )
-}
-
-// Code adapted from Next.js blog starter
-export async function getStaticProps ({ params }) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'description',
-    'date',
-    'slug',
-    // 'author',
-    'content'
-    // 'ogImage',
-    // 'coverImage',
-  ])
-  const content = await markdownToHtml(post.content || '')
-
-  return {
-    props: {
-      post: {
-        ...post,
-        content
-      }
-    }
-  }
-}
-
-export async function getStaticPaths () {
-  const posts = getAllPosts(['slug'])
-
-  return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          slug: post.slug
-        }
-      }
-    }),
-    fallback: false
-  }
 }

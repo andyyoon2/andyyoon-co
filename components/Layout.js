@@ -1,5 +1,6 @@
+'use client'
+
 import { useMemo } from 'react'
-import Head from 'next/head'
 import Container from '@mui/material/Container'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 // import useMediaQuery from '@mui/material/useMediaQuery';
@@ -46,12 +47,6 @@ export default function Layout (props) {
 
   return (
     <>
-      <Head>
-        <title>Andy Yoon</title>
-        <meta name='description' content='' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
       <ThemeProvider theme={theme}>
         <Container
           maxWidth='md' sx={{
