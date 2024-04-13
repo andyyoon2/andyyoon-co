@@ -73,6 +73,10 @@ export default function Post ({ post }) {
           h4: {
             ...responsiveTextRegular
           },
+          'code, pre': {
+            ...responsiveTextSmall,
+            whiteSpace: 'pre-line'
+          },
           img: {
             maxWidth: '100%',
             margin: '1em auto',
