@@ -1,7 +1,11 @@
-import Home from './home'
+import { Intro } from './Intro'
+// import Home from './home'
 
 export default function Page () {
   return (
-    <Home />
+    <>
+      {/* <Home /> */}
+      <Intro />
+    </>
   )
 }
